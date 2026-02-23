@@ -56,6 +56,8 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	if(!msg)
 		return
 
+	GLOB.bot_ooc_sending_que += list(list("author" = holder && holder.fakekey ? holder.fakekey : key, "message" = msg))
+
 	msg = emoji_parse(msg)
 
 	if(SSticker.HasRoundStarted() && ((msg[1] in list(".",";",":","#")) || findtext_char(msg, "say", 1, 5)))
@@ -76,9 +78,6 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 		return
 
 	mob.log_talk(raw_msg, LOG_OOC)
-	//MASSMETA EDIT ADDITION START (BOT_TOPICS) (BlackCrystalic)
-	GLOB.bot_ooc_sending_que += list(list("author" = holder?.fakekey ? holder.fakekey : key, "message" = msg))
-	//MASSMETA EDIT ADDITION END (BOT_TOPICS) (BlackCrystalic)
 	var/keyname = key
 	if(prefs.unlock_content)
 		if(prefs.toggles & MEMBER_PUBLIC)
