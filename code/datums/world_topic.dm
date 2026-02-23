@@ -69,11 +69,6 @@
 /datum/world_topic/playing/Run(list/input)
 	return GLOB.player_list.len
 
-// If you modify the protocol for this, update tools/Tgstation.PRAnnouncer
-/datum/world_topic/pr_announce
-	keyword = "announce"
-	var/static/list/PRcounts = list() //PR id -> number of times announced this round
-
 /datum/world_topic/pr_announce/Run(list/input)
 	var/list/payload = json_decode(input["payload"])
 	var/id = "[payload["pull_request"]["id"]]"
@@ -343,27 +338,9 @@
 		data = missing_params
 		return errorcount
 
-/datum/world_topic/proc/Run(list/input)
-	// Always returns true; actual details in statuscode, response and data variables
-	return TRUE
-
-// API INFO TOPICS
-
 /datum/world_topic/api_get_authed_functions
 	key = "api_get_authed_functions"
 	anonymous = TRUE
-
-/datum/world_topic/api_get_authed_functions/Run(list/input)
-	. = ..()
-	var/list/functions = GLOB.topic_tokens[input["auth"]]
-	if(functions)
-		statuscode = 200
-		response = "Authorized functions retrieved"
-		data = functions
-	else
-		statuscode = 401
-		response = "Unauthorized - No functions found"
-		data = null
 
 // TOPICS
 
