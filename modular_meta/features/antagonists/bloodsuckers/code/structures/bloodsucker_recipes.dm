@@ -131,7 +131,7 @@
 	reqs = list(/obj/item/stack/rods = 1)
 	time = 6 SECONDS
 	category = CAT_WEAPON_MELEE
-	crafting_flags =  CRAFT_MUST_BE_LEARNED
+	crafting_flags = NONE
 
 /datum/crafting_recipe/silver_stake
 	name = "Silver Stake"
@@ -143,4 +143,4 @@
 	)
 	time = 8 SECONDS
 	category = CAT_WEAPON_MELEE
-	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+	crafting_flags = CRAFT_CHECK_DENSITY
