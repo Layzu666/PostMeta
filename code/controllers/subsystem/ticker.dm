@@ -182,9 +182,6 @@ SUBSYSTEM_DEF(ticker)
 				SEND_SIGNAL(src, COMSIG_TICKER_ENTER_SETTING_UP)
 				current_state = GAME_STATE_SETTING_UP
 				Master.SetRunLevel(RUNLEVEL_SETUP)
-				//MASSMETA EDIT ADDITION START (BOT_TOPICS) (BlackCrystalic)
-				timeLeft = 0
-				//MASSMETA EDIT ADDITION END (BOT_TOPICS) (BlackCrystalic)
 				if(start_immediately)
 					fire()
 
