@@ -50,6 +50,7 @@
 #include "reverts\colossus\includes.dm"
 #include "reverts\glasses_protect\includes.dm"
 #include "reverts\hooch\includes.dm"
+#include "reverts\keybinds\includes.dm"
 #include "reverts\nanomed\includes.dm"
 #include "reverts\satchels_back\includes.dm"
 
