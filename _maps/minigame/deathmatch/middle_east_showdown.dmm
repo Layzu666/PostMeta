@@ -1,0 +1,1297 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aS" = (
+/obj/structure/mineral_door/sandstone,
+/obj/effect/turf_decal/sand,
+/obj/effect/mine/stun,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"cU" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/m90/unrestricted{
+	pixel_x = 2;
+	pixel_y = -13
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"ej" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/shotgun/automatic/combat{
+	pixel_x = 12;
+	pixel_y = 2
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"eV" = (
+/obj/effect/turf_decal/sand,
+/obj/item/grenade/syndieminibomb/concussion,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"fz" = (
+/obj/item/ammo_box/magazine/m38,
+/obj/item/ammo_box/magazine/m38,
+/obj/item/ammo_box/magazine/m38,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"fJ" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/shotgun/lethal,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"gn" = (
+/obj/structure/tram/alt/sandstone{
+	name = "sandstone wall"
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"hu" = (
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"ij" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/c20r/unrestricted,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"mo" = (
+/obj/structure/billboard/roadsign/twomillion,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"mE" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/rifle/boltaction/surplus,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"nn" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 8
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"pU" = (
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"qk" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/wt550{
+	pixel_x = 15;
+	pixel_y = 5
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"qZ" = (
+/obj/structure/platform/sandstone,
+/obj/item/grenade/frag,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"rt" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/napad,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"rD" = (
+/obj/item/ammo_casing/rocket/weak,
+/obj/item/ammo_casing/rocket/weak{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/ammo_casing/rocket/weak{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"rU" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/rack/skeletal,
+/obj/item/gun/ballistic/shotgun/hook{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"tA" = (
+/obj/item/ammo_box/magazine/m12g/dragon,
+/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"tH" = (
+/obj/structure/platform/sandstone,
+/obj/item/stack/sheet/mineral/sandstone/thirty{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"yh" = (
+/obj/item/ammo_box/magazine/napad,
+/obj/item/ammo_box/magazine/napad,
+/obj/item/ammo_box/magazine/napad,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"zA" = (
+/obj/machinery/deployable_turret/hmg{
+	dir = 9
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"zN" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 9
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"zY" = (
+/obj/effect/landmark/deathmatch_player_spawn,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Ae" = (
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/obj/item/ammo_box/magazine/smgm45,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"AW" = (
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"BQ" = (
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Ce" = (
+/turf/open/chasm/true/no_smooth/fake_motion_sand/fast,
+/area/deathmatch/fullbright)
+"Cf" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Eh" = (
+/obj/item/ammo_casing/rocket/weak{
+	pixel_x = 3;
+	pixel_y = 1
+	},
+/obj/item/ammo_casing/rocket/weak{
+	pixel_x = -3;
+	pixel_y = 1
+	},
+/obj/item/ammo_casing/rocket/weak{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"EC" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 5
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Gm" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/revolver/mateba{
+	pixel_x = -15;
+	pixel_y = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"HC" = (
+/obj/effect/turf_decal/sand/plating,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Ji" = (
+/obj/effect/powerup/health/full,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"JJ" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 8;
+	icon_state = "lightsand_side"
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"JZ" = (
+/obj/item/ammo_box/magazine/m7mm,
+/obj/item/ammo_box/magazine/m7mm,
+/obj/item/ammo_box/magazine/m7mm,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"KD" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/battle_rifle,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Lb" = (
+/obj/effect/mine/explosive/light,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Lo" = (
+/obj/structure/platform/sandstone,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Mk" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 10
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Og" = (
+/obj/effect/turf_decal/sand,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Oy" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"OD" = (
+/obj/effect/turf_decal/sand/plating,
+/obj/effect/turf_decal/weather/sand{
+	dir = 6
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"OH" = (
+/obj/structure/platform/sandstone,
+/obj/item/stack/sheet/mineral/sandbags/fifty{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"OL" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/l6_saw/unrestricted,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"RG" = (
+/obj/structure/barricade/sandbags,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Ss" = (
+/obj/effect/turf_decal/sand,
+/obj/structure/rack/skeletal{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/claymore/cutlass{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"Tn" = (
+/obj/effect/powerup/ammo,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"TA" = (
+/obj/effect/turf_decal/sand,
+/obj/item/stack/sheet/mineral/sandbags/fifty,
+/obj/item/stack/sheet/mineral/sandstone/thirty,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"VH" = (
+/obj/item/ammo_box/magazine/m223,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/ammo_box/magazine/m223,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"WL" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/rocketlauncher/unrestricted{
+	pixel_x = -21;
+	pixel_y = 4
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"WS" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/ballistic/automatic/lahti{
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+"WX" = (
+/obj/effect/spawner/random/armory/buckshot,
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
+
+(1,1,1) = {"
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+"}
+(2,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Lb
+BQ
+BQ
+ij
+Lo
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(3,1,1) = {"
+Ce
+WS
+Lo
+Lo
+BQ
+BQ
+BQ
+Lo
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Tn
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(4,1,1) = {"
+Ce
+Lo
+zY
+BQ
+BQ
+Tn
+BQ
+tH
+Ji
+BQ
+Lo
+BQ
+BQ
+Lo
+zY
+BQ
+BQ
+BQ
+BQ
+qZ
+BQ
+Lo
+qk
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(5,1,1) = {"
+Ce
+Lo
+BQ
+BQ
+OH
+Lo
+BQ
+Lo
+BQ
+BQ
+OL
+Ji
+BQ
+tH
+BQ
+BQ
+Lo
+BQ
+BQ
+OH
+BQ
+Ji
+Lo
+Lo
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(6,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Tn
+BQ
+BQ
+BQ
+BQ
+BQ
+Tn
+BQ
+BQ
+rt
+zY
+BQ
+BQ
+BQ
+BQ
+zY
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(7,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Lo
+Lo
+BQ
+BQ
+Lo
+BQ
+BQ
+BQ
+Lo
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(8,1,1) = {"
+Ce
+BQ
+Ji
+Lo
+fJ
+BQ
+BQ
+BQ
+Lo
+BQ
+qZ
+Lo
+BQ
+BQ
+Lo
+BQ
+BQ
+tH
+Ji
+BQ
+Lo
+BQ
+Tn
+BQ
+Gm
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(9,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+KD
+zY
+BQ
+BQ
+BQ
+BQ
+mE
+BQ
+BQ
+Lo
+BQ
+BQ
+WL
+BQ
+ej
+BQ
+OH
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(10,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+Ji
+BQ
+BQ
+BQ
+BQ
+OH
+zY
+BQ
+Lo
+BQ
+BQ
+Tn
+BQ
+BQ
+BQ
+BQ
+Lo
+BQ
+Ji
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(11,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+Tn
+Lo
+OH
+BQ
+BQ
+BQ
+BQ
+Lo
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(12,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Lo
+Lo
+BQ
+Tn
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ji
+tH
+Lo
+BQ
+BQ
+BQ
+Lb
+BQ
+BQ
+BQ
+Ce
+"}
+(13,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+Lb
+BQ
+BQ
+BQ
+Tn
+BQ
+BQ
+BQ
+BQ
+cU
+Lo
+Ji
+BQ
+Lb
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(14,1,1) = {"
+Ce
+BQ
+zN
+Mk
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(15,1,1) = {"
+Ce
+nn
+HC
+HC
+nn
+nn
+Mk
+BQ
+BQ
+zN
+nn
+nn
+Mk
+BQ
+BQ
+BQ
+zN
+nn
+nn
+Mk
+BQ
+BQ
+BQ
+BQ
+zN
+JJ
+JJ
+JJ
+JJ
+Ce
+"}
+(16,1,1) = {"
+Ce
+HC
+HC
+HC
+HC
+HC
+HC
+nn
+nn
+HC
+HC
+HC
+HC
+nn
+nn
+nn
+HC
+HC
+HC
+HC
+JJ
+JJ
+JJ
+JJ
+HC
+HC
+HC
+HC
+HC
+Ce
+"}
+(17,1,1) = {"
+Ce
+HC
+HC
+Oy
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+HC
+Ce
+"}
+(18,1,1) = {"
+Ce
+HC
+OD
+BQ
+EC
+Oy
+HC
+HC
+HC
+HC
+HC
+Cf
+Oy
+HC
+HC
+HC
+Oy
+Oy
+Oy
+Oy
+Oy
+HC
+HC
+HC
+HC
+HC
+Oy
+Oy
+HC
+Ce
+"}
+(19,1,1) = {"
+Ce
+OD
+BQ
+BQ
+BQ
+BQ
+EC
+Oy
+Oy
+Oy
+OD
+BQ
+BQ
+EC
+Oy
+OD
+BQ
+BQ
+BQ
+BQ
+BQ
+EC
+Oy
+Oy
+Oy
+OD
+BQ
+BQ
+EC
+Ce
+"}
+(20,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ce
+"}
+(21,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+mo
+BQ
+BQ
+Lb
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+WX
+BQ
+RG
+RG
+BQ
+Lb
+RG
+RG
+RG
+BQ
+Ce
+"}
+(22,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+Ae
+VH
+BQ
+BQ
+pU
+yh
+BQ
+BQ
+RG
+zA
+RG
+BQ
+Ce
+"}
+(23,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+RG
+BQ
+RG
+RG
+RG
+RG
+RG
+RG
+RG
+RG
+BQ
+BQ
+zY
+BQ
+BQ
+Ce
+"}
+(24,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+rD
+RG
+RG
+BQ
+AW
+tA
+RG
+BQ
+RG
+hu
+BQ
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(25,1,1) = {"
+Ce
+BQ
+WX
+RG
+RG
+BQ
+RG
+BQ
+RG
+RG
+fz
+BQ
+BQ
+BQ
+BQ
+BQ
+RG
+BQ
+gn
+gn
+gn
+gn
+BQ
+BQ
+BQ
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(26,1,1) = {"
+Ce
+BQ
+RG
+RG
+Ae
+WX
+RG
+yh
+BQ
+BQ
+BQ
+RG
+RG
+RG
+RG
+zY
+BQ
+BQ
+gn
+TA
+TA
+gn
+gn
+gn
+BQ
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(27,1,1) = {"
+Ce
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+BQ
+RG
+JZ
+BQ
+hu
+RG
+fz
+BQ
+BQ
+RG
+BQ
+aS
+Og
+Og
+Og
+rU
+gn
+BQ
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(28,1,1) = {"
+Ce
+BQ
+RG
+RG
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+RG
+BQ
+RG
+WX
+RG
+AW
+RG
+Eh
+gn
+eV
+Og
+Og
+Ss
+gn
+BQ
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(29,1,1) = {"
+Ce
+BQ
+VH
+RG
+BQ
+RG
+RG
+RG
+RG
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+BQ
+RG
+RG
+gn
+gn
+gn
+gn
+gn
+gn
+RG
+RG
+BQ
+BQ
+BQ
+Ce
+"}
+(30,1,1) = {"
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+Ce
+"}
