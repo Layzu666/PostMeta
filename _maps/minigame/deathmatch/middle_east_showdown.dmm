@@ -118,6 +118,14 @@
 /obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/misc/beach/sand,
 /area/deathmatch/fullbright)
+"Bn" = (
+/obj/structure/platform/sandstone,
+/obj/item/gun/grenadelauncher{
+	pixel_x = 10;
+	pixel_y = 0
+	},
+/turf/open/misc/beach/sand,
+/area/deathmatch/fullbright)
 "BQ" = (
 /turf/open/misc/beach/sand,
 /area/deathmatch/fullbright)
@@ -239,9 +247,17 @@
 /area/deathmatch/fullbright)
 "WL" = (
 /obj/structure/platform/sandstone,
-/obj/item/gun/ballistic/rocketlauncher/unrestricted{
-	pixel_x = -21;
-	pixel_y = 4
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = 13;
+	pixel_y = 0
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = 9;
+	pixel_y = 10
 	},
 /turf/open/misc/beach/sand,
 /area/deathmatch/fullbright)
@@ -467,7 +483,7 @@ Lo
 Lo
 BQ
 BQ
-Lo
+WL
 BQ
 BQ
 BQ
@@ -499,7 +515,7 @@ Tn
 tH
 BQ
 BQ
-Lo
+Bn
 BQ
 Tn
 BQ
@@ -531,7 +547,7 @@ BQ
 Lo
 BQ
 BQ
-WL
+Lo
 BQ
 ej
 BQ
