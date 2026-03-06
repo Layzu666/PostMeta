@@ -81,9 +81,8 @@
 	if(last_index < current_index)
 		for(var/i in (last_index + 1) to current_index)
 			if(i <= length(GLOB.bot_event_sending_que))
-				events_list += json_encode(GLOB.bot_event_sending_que[i])
+				events_list += list(GLOB.bot_event_sending_que[i])
 
-	// Format response for JS - return list of JSON strings
 	return list("events" = events_list, "last_index" = current_index)
 
 /datum/world_topic/playerinfo
@@ -176,7 +175,7 @@
 				"minutes" = text2num(query_roles.item[2]) || 0
 			))
 	qdel(query_roles)
-	player_data["roles"] = json_encode(roles_list)
+	player_data["roles"] = roles_list
 
 	// Get achievements details
 	//Excludes Achievements Score and boss killed statistics, as it's not, well. An achievement? Though it's still present in the same database under the achievement_key line.
@@ -200,7 +199,7 @@
 				"last_updated" = ach_date
 			))
 	qdel(query_achievements_detail)
-	player_data["achievements_detail"] = json_encode(achievements_list)
+	player_data["achievements_detail"] = achievements_list
 
 	return player_data
 
@@ -214,14 +213,13 @@
 
 	if(!GLOB.bot_ooc_sending_que)
 		GLOB.bot_ooc_sending_que = list()
-		return list("ooc" = "[]")
+		return list("ooc" = list())
 
 	// Copy and clear the queue
 	ooc_list = GLOB.bot_ooc_sending_que.Copy()
 	GLOB.bot_ooc_sending_que = list()
 
-	var/json_ooc = json_encode(ooc_list)
-	return list("ooc" = json_ooc)
+	return list("ooc" = ooc_list)
 
 /// Topic handler for sending OOC messages from Discord to game
 /datum/world_topic/send_ooc
