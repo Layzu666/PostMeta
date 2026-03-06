@@ -184,7 +184,7 @@
 		SELECT achievement_key, last_updated
 		FROM [format_table_name("achievements")]
 		WHERE ckey = :ckey
-			AND achievement_key NOT IN ('Achievements Score)
+			AND achievement_key NOT IN ('Achievements Score')
 			AND LOWER(achievement_key) NOT LIKE '%killed'
 		ORDER BY last_updated DESC
 	"}, list("ckey" = target_ckey)) // should work?
