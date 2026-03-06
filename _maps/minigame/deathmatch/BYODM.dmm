@@ -11,7 +11,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/storage/lockbox/dueling,
+/obj/item/storage/lockbox/dueling{
+	open = 1
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "fS" = (

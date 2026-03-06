@@ -30,6 +30,7 @@
 #include "features\more_cell_interactions\includes.dm"
 #include "features\makeshift_grenade_trap\includes.dm"
 #include "features\makeshift_tools\includes.dm"
+#include "features\martials\includes.dm"
 #include "features\parts_tier_5\includes.dm"
 #include "features\copytech\includes.dm"
 #include "features\cargo_extended\includes.dm"

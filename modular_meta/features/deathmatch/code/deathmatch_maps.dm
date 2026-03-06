@@ -25,3 +25,14 @@
 	)
 	map_name = "middle_east_showdown"
 	key = "middle_east_showdown"
+
+/datum/lazy_template/deathmatch/kamurocho
+	name = "Kamurochō"
+	desc = "I Receive You."
+	max_players = 8
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/dragon_of_dojima,
+		/datum/outfit/deathmatch_loadout/mad_dog_of_shimano,
+	)
+	map_name = "kamurocho"
+	key = "kamurocho"

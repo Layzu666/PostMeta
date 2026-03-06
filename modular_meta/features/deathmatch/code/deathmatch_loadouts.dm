@@ -1,3 +1,5 @@
+//the permabrig
+
 /datum/outfit/deathmatch_loadout/prisoner
 	name = "Deathmatch: Prisoner"
 	display_name = "Prisoner"
@@ -8,9 +10,11 @@
 	box = /obj/item/storage/box/survival/prisoner
 	shoes = /obj/item/clothing/shoes/sneakers/orange
 
+//middle east showdown
+
 /datum/outfit/deathmatch_loadout/t_mid_east
 	name = "Deathmatch: Arabic Syndicate Terrorist"
-	display_name = "Alduin"
+	display_name = "Middle East Terrorist"
 	desc = "Pray Allah"
 
 	uniform = /obj/item/clothing/under/pants/slacks
@@ -47,3 +51,27 @@
 
 	l_pocket = /obj/item/ammo_box/magazine/m38
 	r_pocket = /obj/item/ammo_box/magazine/m38
+
+//kamurocho
+
+/datum/outfit/deathmatch_loadout/dragon_of_dojima
+	name = "Deathmatch: Dragon of Dojima"
+	display_name = "Dragon of Dojima"
+	desc = "Bring that shit on!"
+
+	uniform = /obj/item/clothing/under/costume/mm/lad/brawler
+	suit = /obj/item/clothing/suit/costume/mm/brawler_blazer
+	shoes = /obj/item/clothing/shoes/laceup/mm_lgray
+
+	skillchips = list(/obj/item/skillchip/wrestling)
+
+/datum/outfit/deathmatch_loadout/mad_dog_of_shimano
+	name = "Deathmatch: Mad Dog of Shimano"
+	display_name = "Mad Dog of Shimano"
+	desc = "One Eyed Slugger!"
+
+	uniform = /obj/item/clothing/under/costume/mm/lad/maddog
+	shoes = /obj/item/clothing/shoes/mm_metalcomb
+	r_hand = /obj/item/knife/combat
+
+	skillchips = list(/obj/item/skillchip/kaza_ruk)
