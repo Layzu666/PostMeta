@@ -67,7 +67,7 @@
 		bans_list += list(ban_data)
 
 	qdel(query_bans)
-	return list("bans" = bans_list)
+	return json_encode(list("bans" = bans_list))
 
 /datum/world_topic/bot_events
 	keyword = "bot_events"
@@ -83,7 +83,7 @@
 			if(i <= length(GLOB.bot_event_sending_que))
 				events_list += list(GLOB.bot_event_sending_que[i])
 
-	return list("events" = events_list, "last_index" = current_index)
+	return json_encode(list("events" = events_list, "last_index" = current_index))
 
 /datum/world_topic/playerinfo
 	keyword = "playerinfo"
@@ -201,7 +201,7 @@
 	qdel(query_achievements_detail)
 	player_data["achievements_detail"] = achievements_list
 
-	return player_data
+	return json_encode(player_data)
 
 /// Topic handler for getting OOC messages from queue
 /datum/world_topic/ooc_messages
@@ -213,13 +213,13 @@
 
 	if(!GLOB.bot_ooc_sending_que)
 		GLOB.bot_ooc_sending_que = list()
-		return list("ooc" = list())
+		return json_encode(list("ooc" = list()))
 
 	// Copy and clear the queue
 	ooc_list = GLOB.bot_ooc_sending_que.Copy()
 	GLOB.bot_ooc_sending_que = list()
 
-	return list("ooc" = ooc_list)
+	return json_encode(list("ooc" = ooc_list))
 
 /// Topic handler for sending OOC messages from Discord to game
 /datum/world_topic/send_ooc
@@ -232,7 +232,7 @@
 	var/message = input["message"]
 
 	if(!author || !message)
-		return list("error" = "Missing author or message")
+		return json_encode(list("error" = "Missing author or message"))
 
 	message = sanitize(message)
 
@@ -243,4 +243,4 @@
 			continue
 		to_chat(C, "<span class='ooc'><span class='prefix'>DISCORD OOC:</span> <EM>[author]:</EM> <span class='message linkify'>[message]</span></span>")
 
-	return list("success" = TRUE)
+	return json_encode(list("success" = TRUE))
