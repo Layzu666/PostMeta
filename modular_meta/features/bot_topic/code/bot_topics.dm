@@ -163,6 +163,7 @@
 		SELECT job, minutes
 		FROM [format_table_name("role_time")]
 		WHERE ckey = :ckey
+			AND job NOT IN ('Living', 'Admin')
 		ORDER BY minutes DESC
 	"}, list("ckey" = target_ckey))
 
