@@ -43,9 +43,6 @@
 	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
 	},
 /area/deathmatch/fullbright)
-"fc" = (
-/turf/closed/indestructible/riveted,
-/area/deathmatch/fullbright)
 "fv" = (
 /obj/structure/emergency_shield/cult{
 	name = "barrier";
@@ -57,19 +54,15 @@
 	},
 /area/deathmatch/fullbright)
 "fF" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 64;
-	icon_state = "robustacafe";
-	use_power = 0;
-	chosen_sign = /datum/barsign/robustacafe
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "theharmbaton";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/emergency_shield/cult{
-	name = "barrier";
-	max_integrity = 9999999
+/turf/closed/indestructible/riveted{
+	opacity = 0
 	},
-/turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "iF" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -123,20 +116,14 @@
 /turf/open/indestructible/stone,
 /area/deathmatch/fullbright)
 "mo" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 8
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "the-red-mons";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/west{
-	pixel_x = -64;
-	pixel_y = 0;
-	icon_state = "neon-flamingo";
-	use_power = 0;
-	chosen_sign = /datum/barsign/neon_flamingo
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/opshuttle{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "mD" = (
@@ -157,18 +144,20 @@
 /turf/open/indestructible/stone,
 /area/deathmatch/fullbright)
 "mK" = (
-/obj/effect/turf_decal/trimline/white/line{
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "wrong-turn";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
+	},
+/turf/closed/indestructible/syndicate{
+	opacity = 0
+	},
+/area/deathmatch/fullbright)
+"nM" = (
+/turf/closed/indestructible/opshuttle{
+	opacity = 0;
 	dir = 4
-	},
-/obj/machinery/barsign/directional/east{
-	icon_state = "emergencyrumparty";
-	use_power = 0;
-	chosen_sign = /datum/barsign/emergencyrumparty
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
 	},
 /area/deathmatch/fullbright)
 "nT" = (
@@ -189,31 +178,24 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "rr" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 4
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "alohasnackbar";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/east{
-	pixel_x = 96;
-	pixel_y = 0;
-	icon_state = "combocafe";
-	use_power = 0;
-	chosen_sign = /datum/barsign/combocafe
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/syndicate{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "rK" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 96;
-	icon_state = "thegreytide";
-	use_power = 0;
-	chosen_sign = /datum/barsign/thegreytide
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "rock-bottom";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/turf/open/indestructible/rockyground,
+/turf/closed/indestructible/iron,
 /area/deathmatch/fullbright)
 "sb" = (
 /obj/effect/turf_decal/trimline/white/line{
@@ -239,15 +221,15 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "tk" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 94;
-	icon_state = "alohasnackbar";
-	use_power = 0;
-	chosen_sign = /datum/barsign/thealohasnackbar
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "neon-flamingo";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/rockyground,
+/turf/closed/indestructible/riveted{
+	opacity = 0
+	},
 /area/deathmatch/fullbright)
 "uw" = (
 /obj/structure/stairs_frame{
@@ -264,19 +246,14 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "uE" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 4
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "thegreytide";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/east{
-	pixel_x = 96;
-	pixel_y = 0;
-	icon_state = "cold-ones";
-	use_power = 0;
-	chosen_sign = /datum/barsign/coldones
-	},
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/syndicate{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "vy" = (
@@ -315,19 +292,14 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "xS" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 4
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "cold-ones";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/east{
-	icon_state = "the-red-mons";
-	pixel_x = 64;
-	pixel_y = 0;
-	use_power = 0;
-	chosen_sign = /datum/barsign/the_red_mons
-	},
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/syndicate{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "zf" = (
@@ -365,19 +337,14 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "AV" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 8
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "thealenath";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/west{
-	pixel_x = -126;
-	pixel_y = 0;
-	icon_state = "wrong-turn";
-	use_power = 0;
-	chosen_sign = /datum/barsign/wrongturn
-	},
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/syndicate{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "Bu" = (
@@ -405,13 +372,15 @@
 	},
 /area/deathmatch/fullbright)
 "BV" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 64;
-	icon_state = "doctors-orders";
-	use_power = 0
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "emergencyrumparty";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/turf/open/indestructible/rockyground,
+/turf/closed/indestructible/opshuttle{
+	opacity = 0
+	},
 /area/deathmatch/fullbright)
 "Da" = (
 /obj/effect/turf_decal/trimline/white/line{
@@ -474,13 +443,6 @@
 "LE" = (
 /obj/effect/turf_decal/trimline/white/line{
 	dir = 8
-	},
-/obj/machinery/barsign/directional/west{
-	pixel_x = -94;
-	pixel_y = 0;
-	icon_state = "rock-bottom";
-	use_power = 0;
-	chosen_sign = /datum/barsign/rock_bottom
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/emergency_shield/cult{
@@ -545,25 +507,26 @@
 	},
 /area/deathmatch/fullbright)
 "SH" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 64;
-	icon_state = "thealenath";
-	use_power = 0;
-	chosen_sign = /datum/barsign/thealenath
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "the-assembly-line";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/rockyground,
+/turf/closed/indestructible/opshuttle{
+	opacity = 0
+	},
 /area/deathmatch/fullbright)
 "TN" = (
-/obj/machinery/barsign/directional/north{
-	pixel_x = 0;
-	pixel_y = 64;
-	icon_state = "theharmbaton";
-	use_power = 0
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "combocafe";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/rockyground,
+/turf/closed/indestructible/riveted{
+	opacity = 0
+	},
 /area/deathmatch/fullbright)
 "Uh" = (
 /obj/effect/turf_decal/trimline/white/corner{
@@ -572,6 +535,17 @@
 /turf/open/indestructible{
 	icon_state = "type1";
 	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+	},
+/area/deathmatch/fullbright)
+"UF" = (
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "doctors-orders";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
+	},
+/turf/closed/indestructible/riveted{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "UW" = (
@@ -593,20 +567,14 @@
 /turf/open/indestructible/rockyground,
 /area/deathmatch/fullbright)
 "Wl" = (
-/obj/effect/turf_decal/trimline/white/line{
-	dir = 4
+/obj/structure/fluff/fokoff_sign{
+	name = "Bar Sign wannabe";
+	icon_state = "robustacafe";
+	desc = null;
+	icon = 'icons/obj/machines/barsigns.dmi'
 	},
-/obj/machinery/barsign/directional/east{
-	pixel_x = 96;
-	pixel_y = 0;
-	icon_state = "the-assembly-line";
-	use_power = 0;
-	chosen_sign = /datum/barsign/assembly_line
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible{
-	icon_state = "type1";
-	icon = 'modular_meta/features/deathmatch/icons/kamurocho.dmi'
+/turf/closed/indestructible/syndicate{
+	opacity = 0
 	},
 /area/deathmatch/fullbright)
 "WF" = (
@@ -664,15 +632,15 @@
 /area/deathmatch/fullbright)
 
 (1,1,1) = {"
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
-zf
+nM
+nM
+nM
+nM
+nM
+nM
+nM
+nM
+nM
 YI
 YI
 YI
@@ -711,9 +679,9 @@ YI
 YI
 YI
 YI
+fF
 YI
-YI
-TN
+iF
 Bu
 xK
 sb
@@ -878,10 +846,10 @@ zX
 zX
 zX
 zX
+uE
 zX
 zX
-zX
-rK
+Bu
 Bu
 xK
 sb
@@ -904,12 +872,12 @@ YI
 YI
 zX
 zX
+mK
 zX
 zX
-zX
-zX
+Wl
 AS
-fF
+BE
 BE
 FT
 BN
@@ -920,7 +888,7 @@ NB
 NB
 NB
 NB
-NB
+rK
 NB
 NB
 NB
@@ -934,10 +902,10 @@ zX
 zX
 zX
 zX
-zX
+rr
 zX
 AS
-tk
+iF
 Bu
 Eh
 sb
@@ -956,7 +924,7 @@ Bu
 YI
 YI
 YI
-YI
+tk
 YI
 zX
 zX
@@ -1012,11 +980,11 @@ xg
 xg
 Da
 Da
-mo
+Da
 xg
 xg
 xg
-AV
+xg
 Da
 Da
 xg
@@ -1062,7 +1030,7 @@ Yn
 Yn
 fv
 Yn
-Yn
+aP
 Yn
 Yn
 Yn
@@ -1090,7 +1058,7 @@ Yn
 Yn
 fv
 Yn
-aP
+Yn
 Yn
 Yn
 Yn
@@ -1114,22 +1082,22 @@ Yn
 (17,1,1) = {"
 Pd
 Pd
-rr
+Pd
 wg
 PL
-mK
+Pd
 Pd
 wg
 Pd
 Pd
-Wl
+Pd
 Pd
 wg
-xS
+wg
 Pd
 Pd
 Pd
-uE
+wg
 wg
 Pd
 Pd
@@ -1140,11 +1108,11 @@ Yn
 Yn
 "}
 (18,1,1) = {"
-fc
+YI
 AS
 AS
-fc
-fc
+YI
+YI
 zf
 zf
 AS
@@ -1168,11 +1136,12 @@ Uh
 Yn
 "}
 (19,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
+BV
 zf
 zf
 zf
@@ -1180,8 +1149,7 @@ zf
 zf
 zf
 zf
-zf
-zf
+mo
 zX
 zX
 zX
@@ -1196,24 +1164,24 @@ sb
 Yn
 "}
 (20,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+TN
+YI
+YI
 zf
 zf
 zf
 zf
 zf
-zf
+SH
 zf
 zf
 zf
 zX
 zX
 zX
-zX
+xS
 zX
 zX
 AS
@@ -1224,11 +1192,11 @@ sb
 Yn
 "}
 (21,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1252,11 +1220,11 @@ sb
 Yn
 "}
 (22,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1271,20 +1239,20 @@ zX
 zX
 zX
 zX
-zX
+AV
 AS
-SH
+iF
 Bu
 sM
 sb
 Yn
 "}
 (23,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1308,11 +1276,11 @@ sb
 Yn
 "}
 (24,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1336,11 +1304,11 @@ sb
 Yn
 "}
 (25,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1364,11 +1332,11 @@ sb
 Yn
 "}
 (26,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1392,11 +1360,11 @@ sb
 Yn
 "}
 (27,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1420,11 +1388,11 @@ BN
 fv
 "}
 (28,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1439,20 +1407,20 @@ YI
 YI
 YI
 YI
+UF
 YI
-YI
-BV
+Bu
 Bu
 Eh
 sb
 Yn
 "}
 (29,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
@@ -1476,11 +1444,11 @@ sb
 Yn
 "}
 (30,1,1) = {"
-fc
-fc
-fc
-fc
-fc
+YI
+YI
+YI
+YI
+YI
 zf
 zf
 zf
