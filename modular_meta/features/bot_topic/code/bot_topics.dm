@@ -179,12 +179,15 @@
 	player_data["roles"] = json_encode(roles_list)
 
 	// Get achievements details
+	//Excludes Achievements Score and boss killed statistics, as it's not, well. An achievement? Though it's still present in the same database under the achievement_key line.
 	var/datum/db_query/query_achievements_detail = SSdbcore.NewQuery({"
 		SELECT achievement_key, last_updated
 		FROM [format_table_name("achievements")]
 		WHERE ckey = :ckey
+			AND achievement_key NOT IN ('Achievements Score)
+			AND LOWER(achievement_key) NOT LIKE '%killed'
 		ORDER BY last_updated DESC
-	"}, list("ckey" = target_ckey))
+	"}, list("ckey" = target_ckey)) // should work?
 
 	var/achievements_list = list()
 	if(query_achievements_detail.warn_execute())
