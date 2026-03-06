@@ -1,3 +1,5 @@
+//Various topics, various info fetch from DB, many not yet implemented in bot, though might still find use later.
+
 /datum/world_topic/bans
 	keyword = "bans"
 	require_comms_key = TRUE
@@ -244,3 +246,75 @@
 		to_chat(C, "<span class='ooc'><span class='prefix'>DISCORD OOC:</span> <EM>[author]:</EM> <span class='message linkify'>[message]</span></span>")
 
 	return json_encode(list("success" = TRUE))
+// We might need it later
+/datum/world_topic/notes
+	keyword = "notes"
+	require_comms_key = TRUE
+
+/datum/world_topic/notes/Run(list/input)
+	var/target_ckey = input["notes"]
+	var/notes_list = list()
+
+	if(!SSdbcore.Connect())
+		return list("notes" = list())
+
+	var/datum/db_query/query_notes
+	if(target_ckey)
+		query_notes = SSdbcore.NewQuery({"
+			SELECT
+				id,
+				timestamp,
+				IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("messages")].targetckey), targetckey) as player_name,
+				IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("messages")].adminckey), adminckey) as admin_name,
+				adminckey,
+				text,
+				severity,
+				expire_timestamp
+			FROM [format_table_name("messages")]
+			WHERE type = 'note'
+				AND targetckey = :ckey
+				AND deleted = 0
+				AND secret = 0
+				AND (expire_timestamp IS NULL OR expire_timestamp > NOW())
+			ORDER BY timestamp DESC
+		"}, list("ckey" = ckey(target_ckey)))
+	else
+		query_notes = SSdbcore.NewQuery({"
+			SELECT
+				id,
+				timestamp,
+				IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("messages")].targetckey), targetckey) as player_name,
+				IFNULL((SELECT byond_key FROM [format_table_name("player")] WHERE [format_table_name("player")].ckey = [format_table_name("messages")].adminckey), adminckey) as admin_name,
+				adminckey,
+				text,
+				severity,
+				expire_timestamp
+			FROM [format_table_name("messages")]
+			WHERE type = 'note'
+				AND deleted = 0
+				AND secret = 0
+				AND (expire_timestamp IS NULL OR expire_timestamp > NOW())
+			ORDER BY timestamp DESC
+			LIMIT 100
+		"}, list())
+
+	if(!query_notes.warn_execute())
+		qdel(query_notes)
+		return list("notes" = list())
+
+	while(query_notes.NextRow())
+		var/note_data = list(
+			"type" = "note",
+			"id" = text2num(query_notes.item["id"]),
+			"player_name" = query_notes.item["player_name"] || query_notes.item["targetckey"],
+			"admin_name" = query_notes.item["admin_name"] || query_notes.item["adminckey"],
+			"admin_ckey" = query_notes.item["adminckey"],
+			"timestamp" = query_notes.item["timestamp"],
+			"text" = query_notes.item["text"],
+			"severity" = query_notes.item["severity"],
+			"expire_timestamp" = query_notes.item["expire_timestamp"]
+		)
+		notes_list += list(note_data)
+
+	qdel(query_notes)
+	return json_encode(list("notes" = notes_list))

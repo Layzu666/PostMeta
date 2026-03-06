@@ -2,6 +2,7 @@
 #include "code\ban_events.dm"
 #include "code\ban_integration.dm"
 #include "code\bot_topics.dm"
+#include "code\note_integration.dm"
 #include "code\ooc_bridge.dm"
 
 /datum/modpack/topics
