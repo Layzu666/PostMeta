@@ -5,10 +5,13 @@
 	require_comms_key = TRUE
 
 /datum/world_topic/bans/Run(list/input)
+	log_world("Bans: bans topic called")
 	var/target_ckey = input["bans"]
+	log_world("Bans: target_ckey: [target_ckey]")
 	var/bans_list = list()
 
 	if(!SSdbcore.Connect())
+		log_world("Bans: Database connection failed")
 		return list("bans" = list())
 
 	var/datum/db_query/query_bans
@@ -52,6 +55,7 @@
 		"}, list())
 
 	if(!query_bans.warn_execute())
+		log_world("Bans: Query execution failed")
 		qdel(query_bans)
 		return list("bans" = list())
 
@@ -69,23 +73,35 @@
 		bans_list += list(ban_data)
 
 	qdel(query_bans)
-	return json_encode(list("bans" = bans_list))
+	log_world("Bans: Found [length(bans_list)] bans")
+	var/json_result = json_encode(list("bans" = bans_list))
+	log_world("Bans: Returning JSON: [json_result]")
+	return json_result
 
 /datum/world_topic/bot_events
 	keyword = "bot_events"
 	require_comms_key = TRUE
 
 /datum/world_topic/bot_events/Run(list/input)
-	var/last_index = text2num(input["bot_events"]) || 0
-	var/events_list = list()
-	var/current_index = length(GLOB.bot_event_sending_que)
+	log_world("Bot Events: bot_events topic called")
 
-	if(last_index < current_index)
-		for(var/i in (last_index + 1) to current_index)
-			if(i <= length(GLOB.bot_event_sending_que))
-				events_list += list(GLOB.bot_event_sending_que[i])
+	if(!GLOB.bot_event_sending_que)
+		GLOB.bot_event_sending_que = list()
+		log_world("Bot Events: GLOB.bot_event_sending_que was null, initialized empty list")
+		return json_encode(list("events" = list(), "last_index" = 0))
 
-	return json_encode(list("events" = events_list, "last_index" = current_index))
+	log_world("Bot Events: Queue length before copy: [length(GLOB.bot_event_sending_que)]")
+
+	// Copy and clear the queue (same pattern as OOC)
+	var/events_list = GLOB.bot_event_sending_que.Copy()
+	GLOB.bot_event_sending_que = list()
+
+	log_world("Bot Events: Copied [length(events_list)] events, queue cleared")
+
+	var/json_result = json_encode(list("events" = events_list, "last_index" = length(events_list)))
+	log_world("Bot Events: Returning JSON with [length(events_list)] events")
+
+	return json_result
 
 /datum/world_topic/playerinfo
 	keyword = "playerinfo"
@@ -211,17 +227,27 @@
 	require_comms_key = TRUE
 
 /datum/world_topic/ooc_messages/Run(list/input)
+	log_world("OOC Bridge: ooc_messages topic called")
+
 	var/ooc_list = list()
 
 	if(!GLOB.bot_ooc_sending_que)
 		GLOB.bot_ooc_sending_que = list()
+		log_world("OOC Bridge: GLOB.bot_ooc_sending_que was null, initialized empty list")
 		return json_encode(list("ooc" = list()))
+
+	log_world("OOC Bridge: Queue length before copy: [length(GLOB.bot_ooc_sending_que)]")
 
 	// Copy and clear the queue
 	ooc_list = GLOB.bot_ooc_sending_que.Copy()
 	GLOB.bot_ooc_sending_que = list()
 
-	return json_encode(list("ooc" = ooc_list))
+	log_world("OOC Bridge: Copied [length(ooc_list)] messages, queue cleared")
+
+	var/json_result = json_encode(list("ooc" = ooc_list))
+	log_world("OOC Bridge: Returning JSON: [json_result]")
+
+	return json_result
 
 /// Topic handler for sending OOC messages from Discord to game
 /datum/world_topic/send_ooc
@@ -252,10 +278,13 @@
 	require_comms_key = TRUE
 
 /datum/world_topic/notes/Run(list/input)
+	log_world("Notes: notes topic called")
 	var/target_ckey = input["notes"]
+	log_world("Notes: target_ckey: [target_ckey]")
 	var/notes_list = list()
 
 	if(!SSdbcore.Connect())
+		log_world("Notes: Database connection failed")
 		return list("notes" = list())
 
 	var/datum/db_query/query_notes
@@ -299,6 +328,7 @@
 		"}, list())
 
 	if(!query_notes.warn_execute())
+		log_world("Notes: Query execution failed")
 		qdel(query_notes)
 		return list("notes" = list())
 
@@ -317,4 +347,7 @@
 		notes_list += list(note_data)
 
 	qdel(query_notes)
-	return json_encode(list("notes" = notes_list))
+	log_world("Notes: Found [length(notes_list)] notes")
+	var/json_result = json_encode(list("notes" = notes_list))
+	log_world("Notes: Returning JSON: [json_result]")
+	return json_result
