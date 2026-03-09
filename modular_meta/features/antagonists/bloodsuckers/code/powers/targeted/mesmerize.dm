@@ -25,7 +25,7 @@
 	purchase_flags = BLOODSUCKER_CAN_BUY|VASSAL_CAN_BUY
 	bloodcost = 30
 	cooldown_time = 20 SECONDS
-	target_range = 8
+	target_range = 3
 	power_activates_immediately = FALSE
 	prefire_message = "Whom will you subvert to your will?"
 	///Our mesmerized target - Prevents several mesmerizes.
