@@ -68,6 +68,9 @@
 /mob/living/basic/clown/clownhulk/chlown,
 /obj/machinery/light/warm/directional/south,
 /obj/structure/closet/toolcloset,
+/obj/item/stack/sheet/glass,
+/obj/item/stack/rods,
+/obj/item/restraints/handcuffs/cable/yellow,
 /turf/open/indestructible/hotelwood,
 /area/deathmatch)
 "G" = (
