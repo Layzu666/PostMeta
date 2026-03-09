@@ -127,10 +127,6 @@
 /obj/structure/table/wood/fancy/green,
 /turf/open/floor/carpet/green,
 /area/deathmatch/fullbright)
-"E" = (
-/obj/structure/bookcase/random,
-/turf/open/space/basic,
-/area/deathmatch/fullbright)
 "F" = (
 /obj/structure/table/wood/fancy/blue,
 /turf/open/floor/carpet/blue,
@@ -312,10 +308,10 @@ L
 L
 b
 a
-E
-E
-E
-E
+b
+b
+b
+b
 b
 b
 b
@@ -1071,10 +1067,10 @@ L
 L
 b
 a
-E
-E
-E
-E
+b
+b
+b
+b
 b
 y
 k

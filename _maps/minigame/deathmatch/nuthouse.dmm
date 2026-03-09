@@ -85,6 +85,10 @@
 /obj/effect/spawner/random/exotic/antag_gear_weak,
 /turf/open/indestructible/white/smooth_large,
 /area/deathmatch)
+"J" = (
+/obj/item/shard,
+/turf/open/indestructible/hotelwood,
+/area/deathmatch)
 "K" = (
 /obj/structure/closet/secure_closet{
 	req_access = list("armory")
@@ -231,7 +235,7 @@ w
 G
 x
 x
-x
+J
 N
 G
 w
