@@ -14,13 +14,14 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/storage/lockbox/dueling{
-	req_access = null
+/obj/item/shield/roman{
+	pixel_x = 4;
+	pixel_y = -1
 	},
-/turf/open/indestructible/plating,
-/area/deathmatch/fullbright)
-"fS" = (
-/obj/effect/spawner/random/contraband/grenades/dangerous,
+/obj/item/clothing/head/helmet/roman/legionnaire{
+	pixel_x = -5;
+	pixel_y = 8
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "fX" = (
@@ -38,7 +39,6 @@
 /area/deathmatch/fullbright)
 "gD" = (
 /obj/structure/alien/weeds/node,
-/obj/effect/landmark/deathmatch_player_spawn,
 /obj/machinery/disposal/delivery_chute{
 	dir = 8
 	},
@@ -91,9 +91,11 @@
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "mX" = (
-/obj/structure/closet/secure_closet,
 /obj/effect/spawner/random/contraband/armory,
 /obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/structure/closet/secure_closet{
+	req_access = list("armory")
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "nx" = (
@@ -109,6 +111,10 @@
 	dir = 1
 	},
 /turf/open/indestructible/plating/airless,
+/area/deathmatch/fullbright)
+"pS" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "pZ" = (
 /obj/effect/spawner/structure/flipped_table{
@@ -139,13 +145,18 @@
 /turf/closed/indestructible/reinforced/titanium,
 /area/deathmatch/fullbright)
 "sd" = (
-/obj/structure/closet/secure_closet,
 /obj/effect/spawner/random/contraband/armory,
 /obj/effect/mob_spawn/corpse/human/intern,
+/obj/structure/closet/secure_closet{
+	req_access = list("armory")
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "tN" = (
-/obj/item/melee/baton/security/boomerang/loaded,
+/obj/machinery/field/generator/starts_on/magic,
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "wD" = (
@@ -210,7 +221,11 @@
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "EC" = (
-/obj/effect/spawner/random/weapon,
+/obj/item/clothing/suit/utility/fire/firefighter,
+/obj/machinery/door/airlock/titanium{
+	name = "Emergency Shuttle Airlock"
+	},
+/obj/item/clothing/head/helmet/space/eva,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "EJ" = (
@@ -229,6 +244,7 @@
 /area/deathmatch/fullbright)
 "ER" = (
 /obj/effect/gibspawner/human/bodypartless,
+/obj/effect/decal/cleanable/blood,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Fx" = (
@@ -239,16 +255,18 @@
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "FK" = (
-/obj/item/shield/roman,
-/obj/item/clothing/head/helmet/roman/legionnaire,
+/obj/effect/spawner/random/contraband/armory,
+/obj/structure/closet/secure_closet{
+	req_access = list("armory")
+	},
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Gb" = (
 /obj/structure/disposalpipe/broken,
-/obj/structure/alien/weeds,
 /obj/effect/mob_spawn/corpse/human/doctor,
 /obj/item/clothing/mask/facehugger/impregnated,
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/alien/weeds,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Gx" = (
@@ -272,7 +290,6 @@
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/effect/spawner/random/contraband/armory,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Ht" = (
@@ -281,6 +298,7 @@
 	dir = 4
 	},
 /obj/structure/alien/weeds,
+/obj/effect/landmark/deathmatch_player_spawn,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Hz" = (
@@ -294,8 +312,8 @@
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Kd" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/alien/weeds,
+/obj/effect/decal/cleanable/blood/gibs/xeno,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Kk" = (
@@ -359,9 +377,12 @@
 "OP" = (
 /turf/closed/indestructible/reinforced/titanium/nodiagonal,
 /area/deathmatch/fullbright)
+"QE" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/indestructible/plating,
+/area/deathmatch/fullbright)
 "QP" = (
-/obj/item/gun/ballistic/bow,
-/obj/item/ammo_casing/arrow/poison,
+/obj/item/clothing/suit/armor/vest,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "QR" = (
@@ -434,6 +455,7 @@
 /obj/structure/alien/weeds/node,
 /obj/effect/gibspawner/xeno,
 /obj/effect/mine/explosive/light,
+/obj/effect/decal/cleanable/blood/xeno,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "Vd" = (
@@ -466,7 +488,9 @@
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
 "ZU" = (
-/obj/structure/closet/secure_closet,
+/obj/structure/closet/secure_closet{
+	req_access = list("armory")
+	},
 /obj/effect/spawner/random/contraband/armory,
 /turf/open/indestructible/plating,
 /area/deathmatch/fullbright)
@@ -584,7 +608,7 @@ OP
 Yf
 OP
 OP
-jJ
+EC
 OP
 jJ
 OP
@@ -686,7 +710,7 @@ EO
 EO
 EL
 EL
-EC
+EL
 EL
 EL
 EL
@@ -753,11 +777,11 @@ EO
 NR
 EO
 EL
-EL
-Dc
+yS
+tN
 CS
 CS
-CS
+Kd
 CS
 CS
 Dc
@@ -768,7 +792,7 @@ xm
 EL
 IG
 qy
-EL
+QP
 EL
 EL
 sd
@@ -786,9 +810,9 @@ Tg
 EO
 EO
 EO
-FK
-yS
-Kd
+EL
+EL
+Gx
 Hz
 RU
 ek
@@ -802,7 +826,7 @@ fX
 EJ
 EL
 EL
-tN
+EL
 EL
 EL
 EL
@@ -855,7 +879,7 @@ EO
 EO
 EO
 EL
-QP
+EL
 EL
 nx
 MR
@@ -907,7 +931,7 @@ qy
 EL
 EL
 EL
-ZU
+FK
 Yf
 Vd
 Vd
@@ -940,7 +964,7 @@ EL
 qy
 EL
 mX
-ZU
+FK
 Yf
 Yf
 Vd
@@ -957,7 +981,7 @@ EO
 EO
 EO
 EL
-EL
+pS
 EL
 EL
 Kk
@@ -967,7 +991,7 @@ EL
 EL
 EL
 EL
-fS
+EL
 Dq
 EL
 EL
@@ -1026,7 +1050,7 @@ EO
 EO
 EL
 EL
-EL
+QE
 EL
 ij
 QR
