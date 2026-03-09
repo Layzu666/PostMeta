@@ -16,7 +16,7 @@
 	id = "hole";
 	desc = null
 	},
-/turf/open/misc/dirt,
+/turf/open/misc/dirt/station,
 /area/deathmatch/fullbright)
 "ej" = (
 /obj/structure/platform/sandstone,
@@ -35,7 +35,7 @@
 /obj/structure/mineral_door/wood{
 	opacity = 0
 	},
-/turf/open/misc/dirt,
+/turf/open/misc/dirt/station,
 /area/deathmatch/fullbright)
 "fm" = (
 /obj/structure/mineral_door/sandstone{
@@ -142,7 +142,7 @@
 /turf/open/misc/beach/sand,
 /area/deathmatch/fullbright)
 "ri" = (
-/turf/open/misc/dirt,
+/turf/open/misc/dirt/station,
 /area/deathmatch/fullbright)
 "rt" = (
 /obj/structure/platform/sandstone,
@@ -450,7 +450,7 @@
 /obj/structure/tram/alt/wood{
 	name = "wooden wall"
 	},
-/turf/open/misc/dirt,
+/turf/open/misc/dirt/station,
 /area/deathmatch/fullbright)
 
 (1,1,1) = {"
