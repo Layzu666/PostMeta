@@ -61,12 +61,13 @@
 /datum/outfit/bloodsucker_outfit
 	name = "Bloodsucker outfit (Preview only)"
 	suit = /obj/item/clothing/suit/costume/dracula
+	uniform = /obj/item/clothing/under/costume/draculass
 
 /datum/outfit/bloodsucker_outfit/post_equip(mob/living/carbon/human/enrico, visualsOnly=FALSE)
 	enrico.hairstyle = "Undercut"
-	enrico.hair_color = "FFF"
-	enrico.skin_tone = "african2"
-	enrico.eye_color_left = "#663300"
-	enrico.eye_color_right = "#663300"
+	enrico.hair_color = "CCC"
+	enrico.skin_tone = "caucasian3"
+	enrico.eye_color_left = "#0b032e"
+	enrico.eye_color_right = "#0b032e"
 
 	enrico.update_body(is_creating = TRUE)
