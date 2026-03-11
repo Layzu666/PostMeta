@@ -45,7 +45,7 @@
 	if(istype(W, /obj/item/nullrod))
 		visible_message(span_warning("[src] screams in unholy pain from the blow!"), \
 						span_cult("As \the [W] hits you, you feel holy power blast through your form, tearing it apart!"))
-		adjustBruteLoss(22) //22(0) extra damage from the nullrod while in your true form of massmeta. On average this means 40 damage is taken now.
+		adjust_brute_loss(22) //22(0) extra damage from the nullrod while in your true form of massmeta. On average this means 40 damage is taken now.
 
 /mob/living/simple_animal/lesserdemon/UnarmedAttack(atom/attack_target, proximity_flag, list/modifiers)//10 hp healed from landing a hit.
 	if(!isliving(attack_target))

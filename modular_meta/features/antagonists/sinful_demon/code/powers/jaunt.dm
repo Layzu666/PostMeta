@@ -4,7 +4,8 @@
 	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 	sound = 'sound/effects/magic/fireball.ogg'
-	spell_requirements = NONE
+	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED //blockin hands cuz deez shitty pants demon bouta run from bloody cuffs
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	cooldown_time = 50 SECONDS
 

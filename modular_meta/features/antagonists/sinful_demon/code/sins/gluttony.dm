@@ -44,7 +44,7 @@
 	visible_message(
 		span_danger("[src] devours [L]!"),
 		span_userdanger("You feast on [L], restoring your health!"))
-	adjustBruteLoss(-50)
+	adjust_brute_loss(-50)
 	L.gib()
 	return TRUE
 

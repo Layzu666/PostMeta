@@ -47,7 +47,7 @@
 	playsound(caster, 'sound/effects/magic/demon_attack1.ogg', 75, TRUE)
 	victim.adjust_eye_blur(20) //huge array of relatively minor effects.
 	victim.Stun(3 SECONDS)
-	victim.adjustOrganLoss(ORGAN_SLOT_EYES, 10)
+	victim.adjust_organ_loss(ORGAN_SLOT_EYES, 10)
 	victim.visible_message(span_danger("[victim] yawns and want close eyes!"))
 	victim.emote("yawn")
 	to_chat(victim, span_warning("You want to sleep!"))

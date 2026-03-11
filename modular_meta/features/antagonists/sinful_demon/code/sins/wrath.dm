@@ -19,6 +19,7 @@
 	button_icon_state = "generic_fire"
 	active_msg = "You prepare to ignite a target..."
 	ranged_mousepointer = 'icons/effects/mouse_pointers/throw_target.dmi'
+	background_icon_state = "bg_demon"
 	overlay_icon_state = "bg_demon_border"
 
 	school = SCHOOL_TRANSMUTATION
@@ -37,7 +38,7 @@
 
 	if(!isliving(target))
 		return FALSE
-	
+
 	var/mob/living/T = target
 	T.adjust_fire_stacks(WRATHFUL_FIRE_AMOUNT)
 	T.ignite_mob()

@@ -8,6 +8,7 @@
 
 	invocation = "Just one game?"
 	invocation_type = INVOCATION_WHISPER
+	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
 	spell_requirements = NONE
 
 	cooldown_time = 30 SECONDS
@@ -29,6 +30,7 @@
 
 	invocation = "Power beyond measure"
 	invocation_type = INVOCATION_WHISPER
+	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
 	spell_requirements = NONE
 
 	cooldown_time = 180 SECONDS //no farming a bunch of items

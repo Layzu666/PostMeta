@@ -66,7 +66,6 @@
 #include "bloodsuckers\code\vassal\vassal_datum.dm"
 #include "bloodsuckers\code\vassal\vassal_pinpointer.dm"
 #include "bloodsuckers\code\vassal\vassal_procs.dm"
-/* No shitdemons anymore
 #include "sinful_demon\code\powers\jaunt.dm"
 #include "sinful_demon\code\powers\lesserdemon.dm"
 #include "sinful_demon\code\powers\shapeshift.dm"
@@ -80,7 +79,6 @@
 #include "sinful_demon\code\demon_datum.dm"
 #include "sinful_demon\code\demon_objectives.dm"
 #include "sinful_demon\rulesets.dm"
-*/
 
 /datum/modpack/antogonists
 	id = "antagonists"
