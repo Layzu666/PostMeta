@@ -12,3 +12,9 @@
 
 /datum/keybinding/mob/drop_item
 	hotkey_keys = list("Q")
+
+/datum/keybinding/mob/select_hand/right
+	hotkey_keys = null
+
+/datum/keybinding/mob/select_hand/left
+	hotkey_keys = null
