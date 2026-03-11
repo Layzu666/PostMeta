@@ -147,6 +147,7 @@
 		SELECT minutes
 		FROM [format_table_name("role_time")]
 		WHERE ckey = :ckey
+		AND job NOT IN ('Living')
 	"}, list("ckey" = target_ckey))
 
 	var/total_minutes = 0
@@ -180,7 +181,7 @@
 		SELECT job, minutes
 		FROM [format_table_name("role_time")]
 		WHERE ckey = :ckey
-			AND job NOT IN ('Living', 'Admin')
+			AND job NOT IN ('Living')
 		ORDER BY minutes DESC
 	"}, list("ckey" = target_ckey))
 
