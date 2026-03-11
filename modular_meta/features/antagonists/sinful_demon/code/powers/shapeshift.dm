@@ -11,5 +11,5 @@
 
 	invocation = "COWER, MORTALS!!"
 
-	possible_shapes = list(/mob/living/simple_animal/lesserdemon)
+	possible_shapes = list(/mob/living/basic/lesserdemon)
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
