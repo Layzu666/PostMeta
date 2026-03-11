@@ -59,6 +59,7 @@
 /* --- Tweaks --- */
 
 #include "tweaks\antagonists_balance\includes.dm"
+#include "tweaks\balance\includes.dm"
 #include "tweaks\better_ui\includes.dm"
 #include "tweaks\del_required_experiments\includes.dm"
 #include "tweaks\fonts\includes.dm"
