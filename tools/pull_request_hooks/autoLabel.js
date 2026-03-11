@@ -191,7 +191,7 @@ export async function get_updated_label_set({ github, context }) {
 
   // Always check file diffs
   if (diff_url) {
-    const { labels_to_add, labels_to_remove } =
+    const { labels_to_add, labels_to_remove, updated_labels } =
       await check_diff_files_for_labels(github, context);
     labels_to_add.forEach((label) => updated_labels.add(label));
     labels_to_remove.forEach((label) => updated_labels.delete(label));
