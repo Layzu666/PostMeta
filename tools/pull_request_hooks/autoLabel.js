@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/useIterableCallbackReturn: не знаю что тут писать даже */
 import * as autoLabelConfig from './autoLabelConfig.js';
 
 /**
