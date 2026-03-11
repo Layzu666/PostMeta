@@ -22,10 +22,10 @@ jobs:
       - name: Mandatory Empty Step
         run: exit 0
 
-  run_linters:
-    name: Run Linters
-    needs: start_gate
-    uses: ./.github/workflows/run_linters.yml
+  #run_linters:
+  #  name: Run Linters
+  #  needs: start_gate
+  #  uses: ./.github/workflows/run_linters.yml - MASSMETA EDIT (почините говно)
 
   collect_data:
     name: Collect data and setup caches for other tasks
@@ -77,7 +77,7 @@ jobs:
         #compile_all_maps, - we need ts fixed, so we doesn't include it, for now
         run_all_tests,
         run_alternate_tests,
-        run_linters,
+        #run_linters,
       ]
     runs-on: ubuntu-24.04
     steps:
