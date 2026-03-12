@@ -22,6 +22,7 @@
 		/datum/action/cooldown/spell/shapeshift/demon,
 		/datum/action/cooldown/spell/shapeshift/demon/gluttony,
 		/datum/action/cooldown/spell/shapeshift/demon/wrath,
+		/datum/action/cooldown/spell/shapeshift/demon/sloth,
 		/datum/action/cooldown/spell/forcewall/gluttony,
 		/datum/action/cooldown/spell/conjure/summon_greedslots,
 		/datum/action/cooldown/spell/pointed/ignite,

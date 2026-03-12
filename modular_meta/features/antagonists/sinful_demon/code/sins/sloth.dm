@@ -1,8 +1,8 @@
 /datum/action/cooldown/spell/shapeshift/demon/sloth //emergency get out of jail card, but better.
 	name = "Sloth Demon Form"
-	possible_shapes = list(/mob/living/simple_animal/lesserdemon/sloth)
+	possible_shapes = list(/mob/living/basic/lesserdemon/sloth)
 
-/mob/living/simple_animal/lesserdemon/sloth
+/mob/living/basic/lesserdemon/sloth
 	name = "sloth demon"
 	real_name = "sloth demon"
 	desc = "*yawns* aaw.. battle? Ahhh no.. i.. go.. to... to.. sleeep.."
