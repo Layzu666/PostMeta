@@ -54,6 +54,4 @@ SUBSYSTEM_DEF(sunlight)
 	SEND_SIGNAL(src, COMSIG_SOL_WARNING_GIVEN, danger_level, vampire_warning_message, vassal_warning_message)
 
 #undef TIME_BLOODSUCKER_SOL_DELAY
-
 #undef TIME_BLOODSUCKER_NIGHT
-#undef TIME_BLOODSUCKER_BURN_INTERVAL
