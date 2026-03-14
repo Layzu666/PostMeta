@@ -298,10 +298,15 @@
 
 	var/datum/universal_icon/final_icon = render_preview_outfit(/datum/outfit/bloodsucker_outfit)
 	var/datum/universal_icon/final_blood_icon = uni_icon('icons/effects/blood.dmi', "uniformblood")
-	final_blood_icon.blend_icon(BLOOD_COLOR_RED, ICON_MULTIPLY)
+	final_blood_icon.blend_color(BLOOD_COLOR_RED, ICON_MULTIPLY)
 	final_icon.blend_icon(final_blood_icon, ICON_OVERLAY)
 
 	return finish_preview_icon(final_icon)
+
+/datum/antagonist/bloodsucker/ui_data(mob/user)
+	var/list/data = ..()
+	data["total_blood_drank"] = total_blood_drank
+	return data
 
 /datum/antagonist/bloodsucker/ui_static_data(mob/user)
 	var/list/data = list()
