@@ -55,6 +55,7 @@
 #include "reverts\keybinds\includes.dm"
 #include "reverts\nanomed\includes.dm"
 #include "reverts\satchels_back\includes.dm"
+#include "reverts\d_sword\includes.dm"
 
 /* --- Tweaks --- */
 
