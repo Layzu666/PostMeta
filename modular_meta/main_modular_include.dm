@@ -15,6 +15,7 @@
 #include "features\antagonists\includes.dm"
 #include "features\butt_farts\includes.dm"
 #include "features\cheburek_car\includes.dm"
+#include "features\gainable_mythril\includes.dm"
 #include "features\more_clothes\includes.dm"
 #include "features\hardsuits\includes.dm"
 #include "features\kvass_beverage\includes.dm"
