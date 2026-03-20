@@ -6,7 +6,7 @@
 	cost = 5
 
 /turf/closed/mineral/strong/drop_ores()
-	if(prob(66))
+	if(prob(33))
 		new /obj/item/stack/sheet/mineral/mythril(src, 5)
 	else
 		new /obj/item/stack/sheet/mineral/adamantine(src, 5)
