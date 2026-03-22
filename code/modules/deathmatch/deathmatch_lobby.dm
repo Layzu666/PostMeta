@@ -561,9 +561,12 @@
 					return TRUE
 				//MASSMETA EDIT ADDITION START (metacoins)
 				if("set_entry_fee_preset")
+					if(usr.ckey != host)
+						return FALSE
+
 					var/non_host_players = players.len - (players[host] ? 1 : 0)
 					if(non_host_players > 0)
-						to_chat(usr, span_warning("You can only change entry fee before other players join as players."))
+						to_chat(usr, span_warning("You can only change entry fee before other players join"))
 						return FALSE
 
 					var/chosen_preset = params["preset"]

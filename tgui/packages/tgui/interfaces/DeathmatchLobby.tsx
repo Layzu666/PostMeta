@@ -308,14 +308,17 @@ function HostControls(props) {
   } = data;
   /* MASSMETA EDIT ADDITION END (metacoins) */
   const fullAccess = !!host || !!admin;
+  const canSetFee = !!host;
   /* MASSMETA EDIT ADDITION START (metacoins) */
   const feeOptions = ['30', '50', '60', '80', '100', 'Custom'];
+  /* MASSMETA EDIT ADDITION START (metacoins) */
   const feeSelected =
     !entry_fee_set || entry_fee === 0
       ? 'Select Fee'
       : feeOptions.includes(String(entry_fee))
         ? String(entry_fee)
         : 'Custom';
+  /* MASSMETA EDIT ADDITION END (metacoins) */
   const [customFee, setCustomFee] = useState(entry_fee || 30);
   const [customMode, setCustomMode] = useState(feeSelected === 'Custom');
   const showCustomInput = customMode || feeSelected === 'Custom';
@@ -324,15 +327,15 @@ function HostControls(props) {
   return (
     <Section fill scrollable>
       <MapInfo />
-      {/* MASSMETA EDIT ADDITION START (metacoins) */}
       <Divider />
       <LabeledList>
+        {/* MASSMETA EDIT ADDITION START (metacoins) */}
         <LabeledList.Item label="Entry Fee">{entry_fee || 0}</LabeledList.Item>
         <LabeledList.Item label="Prize Pool">
+          {/* MASSMETA EDIT ADDITION END (metacoins) */}
           {prize_pool || 0}
         </LabeledList.Item>
       </LabeledList>
-      {/* MASSMETA EDIT ADDITION END (metacoins) */}
       <Divider />
       <Box textAlign="center" color="average">
         {active_mods}
@@ -341,7 +344,7 @@ function HostControls(props) {
         <>
           <Divider />
           {/* MASSMETA EDIT ADDITION START (metacoins) */}
-          {!playing && (
+          {canSetFee && !playing && (
             <Dropdown
               width="100%"
               selected={feeSelected}
@@ -367,7 +370,9 @@ function HostControls(props) {
               }}
             />
           )}
-          {!playing && showCustomInput && (
+          {/* MASSMETA EDIT ADDITION START (metacoins) */}
+          {canSetFee && !playing && showCustomInput && (
+            // MASSMETA EDIT ADDITION END (metacoins)
             <Stack mt={1}>
               <Stack.Item grow>
                 <NumberInput
