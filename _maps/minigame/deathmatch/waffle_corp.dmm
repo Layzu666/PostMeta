@@ -124,12 +124,10 @@
 /turf/open/floor/grass,
 /area/deathmatch/fullbright)
 "be" = (
-/obj/effect/turf_decal/tile/dark_blue/fourcorners,
-/obj/machinery/scanner_gate/preset_guns{
-	dir = 4;
-	pixel_x = -10
+/obj/structure/closet/crate/secure/syndicate/wafflecorp,
+/turf/open/indestructible{
+	icon_state = "asphalt"
 	},
-/turf/open/indestructible,
 /area/deathmatch/fullbright)
 "bk" = (
 /obj/effect/turf_decal/arrows/red{
@@ -1925,12 +1923,15 @@
 /turf/open/floor/grass,
 /area/deathmatch/fullbright)
 "yF" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/security{
 	name = "police barrier";
 	desc = "The cops have stopped you going any further.";
 	proj_pass_rate = 60
 	},
-/turf/open/floor/grass,
+/turf/open/indestructible{
+	icon_state = "asphalt"
+	},
 /area/deathmatch/fullbright)
 "yG" = (
 /obj/effect/decal/cleanable/plastic,
@@ -2301,15 +2302,6 @@
 	},
 /obj/structure/table/wood,
 /turf/open/indestructible/hotelwood,
-/area/deathmatch/fullbright)
-"DI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/barricade/security{
-	name = "police barrier";
-	desc = "The cops have stopped you going any further.";
-	proj_pass_rate = 60
-	},
-/turf/open/indestructible/stone,
 /area/deathmatch/fullbright)
 "DZ" = (
 /obj/structure/closet/crate/preopen,
@@ -2748,9 +2740,7 @@
 /obj/machinery/door/poddoor/shutters/window/indestructible/preopen{
 	dir = 8
 	},
-/turf/open/indestructible{
-	icon_state = "asphalt"
-	},
+/turf/open/indestructible,
 /area/deathmatch/fullbright)
 "IO" = (
 /obj/effect/mapping_helpers/airlock/locked,
@@ -2812,10 +2802,6 @@
 "JI" = (
 /obj/effect/turf_decal/tile/dark_blue/fourcorners,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/scanner_gate/preset_guns{
-	dir = 4;
-	pixel_x = -10
-	},
 /turf/open/indestructible,
 /area/deathmatch/fullbright)
 "JN" = (
@@ -4137,9 +4123,7 @@
 /obj/machinery/door/poddoor/shutters/window/indestructible/preopen{
 	dir = 8
 	},
-/turf/open/indestructible{
-	icon_state = "asphalt"
-	},
+/turf/open/indestructible,
 /area/deathmatch/fullbright)
 "ZQ" = (
 /turf/closed/indestructible/fakedoor{
@@ -4554,9 +4538,9 @@ or
 or
 tn
 BB
-FW
-FW
-DI
+hk
+uo
+lW
 BB
 tn
 tn
@@ -4898,7 +4882,7 @@ Jr
 Os
 Os
 Os
-yF
+av
 pa
 Jr
 Js
@@ -4957,8 +4941,8 @@ ul
 Jr
 Jr
 Jr
-Jr
 FW
+Jr
 Jr
 Jr
 Jr
@@ -5017,8 +5001,8 @@ Vq
 RJ
 RJ
 RJ
-RJ
 TK
+RJ
 Pn
 RJ
 AR
@@ -5075,7 +5059,7 @@ OY
 OY
 OY
 OY
-kp
+yF
 OY
 OY
 Ck
@@ -5135,10 +5119,10 @@ OY
 OY
 OY
 OY
-OY
-OY
-OY
 Ck
+OY
+OY
+OY
 OY
 OY
 sd
@@ -5196,9 +5180,9 @@ OY
 OY
 OY
 OY
-OY
-OY
 Ck
+OY
+OY
 OY
 OY
 sd
@@ -5257,8 +5241,8 @@ OY
 Id
 wA
 wA
-wA
 tK
+wA
 wA
 wA
 bP
@@ -5806,7 +5790,7 @@ sR
 NQ
 VN
 JI
-be
+Ni
 sm
 ot
 Gs
@@ -5937,7 +5921,7 @@ Ni
 Mn
 kR
 MU
-OY
+be
 qt
 OY
 OY
