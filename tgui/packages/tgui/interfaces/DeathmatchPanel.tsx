@@ -19,6 +19,11 @@ type Lobby = {
   max_players: number;
   map: string;
   playing: BooleanLike;
+  /* MASSMETA EDIT ADDITION START (metacoins) */
+  entry_fee: number;
+  entry_fee_set: BooleanLike;
+  prize_pool: number;
+  /* MASSMETA EDIT ADDITION START (metacoins) */
 };
 
 type Data = {
@@ -33,7 +38,10 @@ export function DeathmatchPanel(props) {
   const { hosting } = data;
 
   return (
-    <Window title="Deathmatch Lobbies" width={360} height={400}>
+    // MASSMETA EDIT ADDITION START (metacoins)
+    //more width and height to fit the icons
+    <Window title="Deathmatch Lobbies" width={520} height={420}>
+      {/* MASSMETA EDIT ADDITION START (metacoins) */}
       <Window.Content>
         <Stack fill vertical>
           <Stack.Item>
@@ -71,7 +79,19 @@ function LobbyPane(props) {
       <Table>
         <Table.Row header>
           <Table.Cell>Host</Table.Cell>
+          {/*MASSMETA EDIT ADDITION START (metacoins) */}
           <Table.Cell>Map</Table.Cell>
+          <Table.Cell textAlign="right">
+            <Tooltip content="Entry fee">
+              <Icon name="coins" />
+            </Tooltip>
+          </Table.Cell>
+          <Table.Cell textAlign="right">
+            <Tooltip content="Prize pool">
+              <Icon name="piggy-bank" />
+            </Tooltip>
+          </Table.Cell>
+          {/* MASSMETA EDIT ADDITION END (metacoins) */}
           <Table.Cell>
             <Tooltip content="Players">
               <Icon name="users" />
@@ -84,7 +104,9 @@ function LobbyPane(props) {
 
         {lobbies.length === 0 && (
           <Table.Row>
-            <Table.Cell colSpan={4}>
+            {/* MASSMETA EDIT ADDITION START (metacoins) */}
+            <Table.Cell colSpan={6}>
+              {/* MASSMETA EDIT ADDITION END (metacoins) */}
               <NoticeBox textAlign="center">
                 No lobbies found. Start one!
               </NoticeBox>
@@ -128,6 +150,14 @@ function LobbyDisplay(props) {
         )}
       </Table.Cell>
       <Table.Cell>{lobby.map}</Table.Cell>
+      {/* MASSMETA EDIT ADDITION START (metacoins) */}
+      <Table.Cell collapsing textAlign="right">
+        {lobby.entry_fee_set ? lobby.entry_fee || 0 : '-'}
+      </Table.Cell>
+      <Table.Cell collapsing textAlign="right">
+        {lobby.prize_pool || 0}
+      </Table.Cell>
+      {/* MASSMETA EDIT ADDITION END (metacoins) */}
       <Table.Cell collapsing>
         {lobby.players}/{lobby.max_players}
       </Table.Cell>

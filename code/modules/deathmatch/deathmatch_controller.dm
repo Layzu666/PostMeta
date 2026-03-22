@@ -61,7 +61,12 @@
 			players = lobby.players.len,
 			max_players = initial(lobby.map.max_players),
 			map = initial(lobby.map.name),
-			playing = lobby.playing
+			// MASSMETA EDIT ADDITION START (metacoins)
+			playing = lobby.playing,
+			entry_fee = lobby.entry_fee,
+			entry_fee_set = lobby.entry_fee_set,
+			prize_pool = lobby.prize_pool,
+			// MASSMETA EDIT ADDITION END (metacoins)
 		))
 
 /datum/deathmatch_controller/proc/find_lobby_by_user(ckey)
