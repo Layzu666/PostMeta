@@ -370,9 +370,10 @@ function HostControls(props) {
               }}
             />
           )}
-          {/* MASSMETA EDIT ADDITION START (metacoins) */}
+          {/* MASSMETA EDIT CHANGE START (metacoins) */}
+          {/* ORIGINAL: {!playing && showCustomInput && (*/}
           {canSetFee && !playing && showCustomInput && (
-            // MASSMETA EDIT ADDITION END (metacoins)
+            // MASSMETA EDIT CHANGE END (metacoins)
             <Stack mt={1}>
               <Stack.Item grow>
                 <NumberInput
