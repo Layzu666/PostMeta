@@ -1,15 +1,15 @@
 #define METACOIN_REWARD_ROUNDSTART_READY 10
 #define METACOIN_REWARD_SURVIVE_EVAC 25
-#define METACOIN_REWARD_IMPORTANT_JOBS 25
+#define METACOIN_REWARD_IMPORTANT_JOBS 50
 #define METACOIN_REWARD_ANTAG_GREENTEXT 50
 #define METACOIN_IMPORTANT_JOBS list(JOB_SHAFT_MINER, JOB_CAPTAIN, JOB_HEAD_OF_PERSONNEL, JOB_HEAD_OF_SECURITY, JOB_RESEARCH_DIRECTOR, JOB_SECURITY_OFFICER_SUPPLY, JOB_SECURITY_OFFICER_SCIENCE, JOB_SECURITY_OFFICER_ENGINEERING, JOB_WARDEN, JOB_SECURITY_OFFICER) // THIS SHALL BE IN CONFIG, BUT I'M VERY LAZY, OKAY?
 #define METACOIN_ICON_PATH "icons/obj/economy.dmi"
 #define METACOIN_ICON_STATE "coin_tails" // someone get us a nice lil' carp_coin sprite, or "masscoin"
 //metacoin awards, right now only used in achievements.
-#define METACOIN_AWARD_SMALL 30
-#define METACOIN_AWARD_MED 50
-#define METACOIN_AWARD_BIG 75
-#define METACOIN_AWARD_HUGE 250 // economics here kinda suck actually
+#define METACOIN_AWARD_SMALL 70
+#define METACOIN_AWARD_MED 125
+#define METACOIN_AWARD_BIG 165
+#define METACOIN_AWARD_HUGE 500 // economics here kinda suck actually
 
 //Custom rewards list, if you want to, let's say, award more metacoins for specific achievements.
 GLOBAL_ALIST_INIT(metacoin_achievement_reward_overrides, alist(

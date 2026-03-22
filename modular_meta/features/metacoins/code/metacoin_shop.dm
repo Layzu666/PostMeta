@@ -65,14 +65,14 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 			"listing_name" = "spray_libital",
 			"listing_display_name" = "Libital Spray",
 			"listing_display_desc" = "An medigel full of libital, mainly used to treat bruises",
-			"listing_price" = 25,
+			"listing_price" = 50,
 			"listing_typepath" = /obj/item/reagent_containers/medigel/libital,
 		),
 		alist(
 			"listing_name" = "spray_auri",
 			"listing_display_name" = "Aiuri Spray",
 			"listing_display_desc" = "An medigel full of aiuri, mainly used to treat burns",
-			"listing_price" = 25,
+			"listing_price" = 50,
 			"listing_typepath" = /obj/item/reagent_containers/medigel/aiuri,
 		),
 		alist(
