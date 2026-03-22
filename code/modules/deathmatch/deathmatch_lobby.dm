@@ -27,7 +27,7 @@
 	/// Metacoin entry fee for each player slot in this lobby.
 	var/entry_fee = 0
 	/// Host already picked an entry fee and non-host players can move into players list.
-	var/entry_fee_set = FALSE
+	var/entry_fee_set = TRUE
 	/// Current metacoin bank for winner payout.
 	var/prize_pool = 0
 	/// ckey => paid metacoins for this lobby.

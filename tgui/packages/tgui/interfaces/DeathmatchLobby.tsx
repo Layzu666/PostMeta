@@ -310,11 +310,12 @@ function HostControls(props) {
   const fullAccess = !!host || !!admin;
   /* MASSMETA EDIT ADDITION START (metacoins) */
   const feeOptions = ['30', '50', '60', '80', '100', 'Custom'];
-  const feeSelected = !entry_fee_set
-    ? 'Select Fee'
-    : feeOptions.includes(String(entry_fee))
-      ? String(entry_fee)
-      : 'Custom';
+  const feeSelected =
+    !entry_fee_set || entry_fee === 0
+      ? 'Select Fee'
+      : feeOptions.includes(String(entry_fee))
+        ? String(entry_fee)
+        : 'Custom';
   const [customFee, setCustomFee] = useState(entry_fee || 30);
   const [customMode, setCustomMode] = useState(feeSelected === 'Custom');
   const showCustomInput = customMode || feeSelected === 'Custom';
@@ -326,9 +327,7 @@ function HostControls(props) {
       {/* MASSMETA EDIT ADDITION START (metacoins) */}
       <Divider />
       <LabeledList>
-        <LabeledList.Item label="Entry Fee">
-          {entry_fee_set ? entry_fee || 0 : 'Not set'}
-        </LabeledList.Item>
+        <LabeledList.Item label="Entry Fee">{entry_fee || 0}</LabeledList.Item>
         <LabeledList.Item label="Prize Pool">
           {prize_pool || 0}
         </LabeledList.Item>
@@ -349,6 +348,11 @@ function HostControls(props) {
               options={['Select Fee', ...feeOptions]}
               onSelected={(value) => {
                 if (value === 'Select Fee') {
+                  setCustomMode(false);
+                  act('host', {
+                    func: 'set_entry_fee_preset',
+                    preset: '0',
+                  });
                   return;
                 }
                 if (value === 'Custom') {
