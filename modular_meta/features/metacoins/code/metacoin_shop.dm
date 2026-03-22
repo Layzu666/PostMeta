@@ -944,10 +944,7 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 		ui.open()
 
 /datum/metacoin_antag_token_panel/ui_assets(mob/user)
-	var/antag_asset_path = text2path("/datum/asset/spritesheet/antagonists")
-	if(!ispath(antag_asset_path, /datum/asset))
-		return list()
-	return list(get_asset_datum(antag_asset_path))
+	return list(get_asset_datum(/datum/asset/spritesheet_batched/antagonists))
 /datum/metacoin_antag_token_panel/ui_data(mob/user)
 	var/list/data = list()
 	var/client_ckey = owner?.ckey
