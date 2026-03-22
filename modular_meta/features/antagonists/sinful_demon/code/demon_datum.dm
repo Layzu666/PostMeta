@@ -244,8 +244,8 @@
 #undef SIN_WRATH
 
 /datum/antagonist/sinfuldemon/get_preview_icon()
-	var/icon/sinfuldemon_icon = icon('modular_meta/features/antagonists/icons/sinful_demon/passport_photo.dmi', "sinfuldemon")
+	var/datum/universal_icon/sinfuldemon_icon = uni_icon('modular_meta/features/antagonists/icons/sinful_demon/passport_photo.dmi', "sinfuldemon")
 
-	sinfuldemon_icon.Scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
+	sinfuldemon_icon.scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
 
 	return sinfuldemon_icon

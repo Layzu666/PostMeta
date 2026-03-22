@@ -75,3 +75,28 @@
 	r_hand = /obj/item/knife/combat
 
 	skillchips = list(/obj/item/skillchip/kaza_ruk)
+
+/datum/outfit/deathmatch_loadout/curator
+	name = "Deathmatch: Curator"
+	display_name = "Curator"
+	desc = "What you looking at."
+
+	uniform = /obj/item/clothing/under/rank/civilian/curator
+	back = /obj/item/storage/backpack
+	box = /obj/item/storage/box/survival
+	backpack_contents = list(/obj/item/choice_beacon/hero = 1)
+	belt = /obj/item/modular_computer/pda/curator
+	shoes = /obj/item/clothing/shoes/laceup
+	l_pocket = /obj/item/laser_pointer/green
+	r_pocket = /obj/item/key/displaycase
+	l_hand = /obj/item/storage/bag/books
+
+	accessory = /obj/item/clothing/accessory/pocketprotector/full
+
+/datum/outfit/deathmatch_loadout/patient
+	name = "Deathmatch: Patient"
+	display_name = "Patient"
+	desc = "COCKSUCKER!"
+
+	uniform = /obj/item/clothing/under/color/white
+	shoes = /obj/item/clothing/shoes/sneakers/white
