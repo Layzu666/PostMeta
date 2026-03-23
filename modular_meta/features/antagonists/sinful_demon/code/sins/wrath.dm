@@ -29,7 +29,7 @@
 	sound = 'sound/effects/magic/fireball.ogg'
 	cooldown_time = 1 MINUTES
 	active_msg = span_notice("You ignite in a flash of hellfire!")
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 /datum/action/cooldown/spell/pointed/ignite/InterceptClickOn(mob/living/clicker, params, atom/target)
 	. = ..()
@@ -53,4 +53,4 @@
 
 	cooldown_time = 80 SECONDS
 
-	jaunt_duration = 3 SECONDS
+	jaunt_duration = 2 SECONDS

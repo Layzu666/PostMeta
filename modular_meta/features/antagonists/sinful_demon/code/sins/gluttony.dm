@@ -10,7 +10,7 @@
 	invocation_type = INVOCATION_SHOUT
 
 	wall_type = /obj/effect/gluttony/timed
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 /datum/action/cooldown/spell/shapeshift/demon/gluttony //emergency get out of jail card, but better. It also eats agents 220.
 	name = "Gluttony Demon Form"
@@ -56,3 +56,7 @@
 	. = ..()
 	if(timeleft)
 		QDEL_IN(src, timeleft)
+
+/datum/movespeed_modifier/fatty //fat prevent user to walking fast or even fly and swim
+	multiplicative_slowdown = 4
+	movetypes = ALL

@@ -9,7 +9,7 @@
 	invocation = "Just one game?"
 	invocation_type = INVOCATION_WHISPER
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	cooldown_time = 180 SECONDS
 	summon_lifespan = 1 MINUTES
@@ -31,7 +31,7 @@
 	invocation = "Power beyond measure"
 	invocation_type = INVOCATION_WHISPER
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	cooldown_time = 180 SECONDS //no farming a bunch of items
 	summon_radius = 0 //spawns on top of us

@@ -5,7 +5,7 @@
 /mob/living/basic/lesserdemon/sloth
 	name = "sloth demon"
 	real_name = "sloth demon"
-	desc = "*yawns* aaw.. battle? Ahhh no.. i.. go.. to... to.. sleeep.."
+	desc = "A large, menacing creature covered in armored red scales, and red one sleeping cap."
 	icon_state = "lesserdaemon_sloth"
 	icon_living = "lesserdaemon_sloth"
 	speed = 1.5
@@ -24,11 +24,11 @@
 	overlay_icon_state = "bg_demon_border"
 
 	school = SCHOOL_EVOCATION
-	invocation = "MIMIR"
+	invocation = "MI'MIR"
 	invocation_type = INVOCATION_SHOUT
 
 	cooldown_time = 20 SECONDS
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	hand_path = /obj/item/melee/touch_attack/sleepy
 
@@ -57,3 +57,34 @@
 	name = "Sloth Demonic Jaunt"
 	cooldown_time = 80 SECONDS
 	jaunt_duration = 1 SECONDS
+
+/datum/action/cooldown/spell/timestop/sloth
+	name = "Stop Time"
+	desc = "This spell stops time for everyone INCLUDE you."
+	button_icon_state = "time"
+	background_icon_state = "bg_demon"
+	overlay_icon_state = "bg_demon_border"
+	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
+
+	cooldown_time = 180 SECONDS
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+	invocation = "CAN I HAVE TIME TO SLEEP?!!"
+	invocation_type = INVOCATION_SHOUT
+
+	timestop_range = 2
+	timestop_duration = 12 SECONDS
+
+	owner_is_immune_to_all_timestop = FALSE
+	owner_is_immune_to_self_timestop = FALSE
+
+/datum/action/cooldown/spell/timestop/sloth/cast(atom/cast_on)
+	. = ..()
+	new /obj/effect/timestop/sloth(get_turf(cast_on), timestop_range, timestop_duration)
+
+/obj/effect/timestop/sloth
+	anchored = TRUE
+	name = "sleeping area"
+	desc = "Go to sleep.. Go to sleep."
+	icon = 'modular_meta/features/antagonists/icons/sinful_demon/160x160.dmi'
+	icon_state = "go_to_sleep"

@@ -9,9 +9,9 @@
 	invocation = "Aren't I so amazing?"
 	invocation_type = INVOCATION_WHISPER
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
-	cooldown_time = 30 SECONDS
+	cooldown_time = 60 SECONDS
 	summon_lifespan = 1 MINUTES
 	summon_radius = 0
 	summon_type = list(/obj/structure/mirror/magic/lesser)
@@ -29,7 +29,7 @@
 	invocation_type = INVOCATION_WHISPER
 
 	cooldown_time = 12 SECONDS
-	spell_requirements = NONE
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	hand_path = /obj/item/melee/touch_attack/mend
 
