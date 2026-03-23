@@ -51,6 +51,6 @@
 	name = "Greater Demonic Jaunt"
 	desc = "Briefly turn to cinder and ash, allowing you to freely pass through objects. Lasts slightly shorter than normal, but is more easily used."
 
-	cooldown_time = 25 SECONDS
+	cooldown_time = 80 SECONDS
 
 	jaunt_duration = 3 SECONDS
