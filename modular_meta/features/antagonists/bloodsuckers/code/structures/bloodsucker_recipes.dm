@@ -128,7 +128,10 @@
 	name = "Hardened Stake"
 	result = /obj/item/stake/hardened
 	tool_behaviors = list(TOOL_WELDER)
-	reqs = list(/obj/item/stack/rods = 1)
+	reqs = list(
+		/obj/item/stake = 1,
+		/obj/item/stack/rods = 1,
+	)
 	time = 6 SECONDS
 	category = CAT_WEAPON_MELEE
 	crafting_flags = NONE
