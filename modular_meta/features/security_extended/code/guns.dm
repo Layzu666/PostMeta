@@ -9,8 +9,15 @@
 	base_icon_state = "laser_rifle"
 	fire_delay = 0
 
-/obj/item/ammo_box/magazine
+/obj/item/ammo_box/magazine/recharge
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/ammo_box/magazine/recharge/emp_act(severity)
+	. = ..()
+	if(!(. & EMP_PROTECT_CONTENTS))
+		stored_ammo = list(0)
+		update_desc()
+	return TRUE
 
 /obj/item/ammo_box/magazine/recharge/stun
 	name = "stun type power pack"
