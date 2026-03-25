@@ -38,6 +38,7 @@
 #include "features\not_enough_decor\includes.dm"
 #include "features\mod_vend\includes.dm"
 #include "features\roundstart_shell\includes.dm"
+#include "features\security_extended\includes.dm"
 #include "features\telescience\includes.dm"
 #include "features\deathmatch\includes.dm"
 #include "features\soundtrack_modpack\includes.dm"
