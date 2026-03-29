@@ -132,12 +132,12 @@
 			sound = 'sound/effects/kaching.ogg',
 		)
 
-/datum/metacoin_shop_controller/proc/try_slot_spin(target_ckey)
+/datum/metacoin_shop_controller/proc/try_slot_spin(target_ckey, mob/request_user)
 	target_ckey = ckey(target_ckey)
 	if(!target_ckey)
 		return list("ok" = FALSE, "error" = "invalid_request")
 
-	if(!is_preround_purchase_open())
+	if(!is_preround_purchase_open() && !isobserver(request_user))
 		return list("ok" = FALSE, "error" = "shop_closed")
 
 	if(slot_spin_locks_by_ckey[target_ckey])
@@ -295,6 +295,7 @@
 	var/balance = shop.fetch_metacoin_balance(client_ckey)
 
 	data["isPregame"] = shop.is_preround_purchase_open()
+	data["isObserver"] = isobserver(user)
 	data["working"] = working
 	data["balance"] = isnull(balance) ? 0 : balance
 	data["state"] = current_reels
@@ -314,9 +315,9 @@
 			return FALSE
 
 		working = TRUE
-
-		var/list/result = get_metacoin_shop_controller().try_slot_spin(owner?.ckey)
 		var/mob/user_mob = ui?.user
+
+		var/list/result = get_metacoin_shop_controller().try_slot_spin(owner?.ckey, user_mob)
 
 		if(!result["ok"])
 			if(user_mob)

@@ -36,6 +36,7 @@ type HistoryEntry = {
 
 type Data = {
   isPregame: boolean;
+  isObserver: boolean;
   working: boolean;
   balance: number;
   icons: ReelSymbol[];
@@ -131,6 +132,7 @@ export const MetaCoinSlot = () => {
   const { act, data } = useBackend<Data>();
   const {
     isPregame,
+    isObserver,
     working,
     balance,
     icons = [],
@@ -222,7 +224,11 @@ export const MetaCoinSlot = () => {
   const displayedHistory = localRolling ? frozenHistory : history;
   const resultView = getResultView(displayedLastSpin);
   const spinLocked =
-    working || localRolling || !isPregame || balance < cost || cooldownActive;
+    working ||
+    localRolling ||
+    (!isPregame && !isObserver) ||
+    balance < cost ||
+    cooldownActive;
 
   const handleSpin = () => {
     if (spinLocked) {
@@ -239,7 +245,7 @@ export const MetaCoinSlot = () => {
   return (
     <Window title="Metacoin Slot Machine" width={900} height={720}>
       <Window.Content scrollable>
-        {!isPregame && (
+        {!isPregame && !isObserver && (
           <NoticeBox danger>
             Slot machine is available only before round start.
           </NoticeBox>
