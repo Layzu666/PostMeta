@@ -9,7 +9,7 @@
 #define METACOIN_AWARD_NONE 0
 #define METACOIN_AWARD_ONE_POINT 1
 #define METACOIN_AWARD_CLOSE_TO_NOTHING 5
-#define METACOIN_AWARD_SMALL 70
+#define METACOIN_AWARD_SMALL 50
 #define METACOIN_AWARD_MED 150
 #define METACOIN_AWARD_BIG 250
 #define METACOIN_AWARD_HUGE 500 // economics here kinda suck actually
@@ -25,7 +25,7 @@ GLOBAL_ALIST_INIT(metacoin_achievement_reward_overrides, alist(
 	/datum/award/achievement/jobs/theoretical_limits = METACOIN_AWARD_MED,
 	/datum/award/achievement/jobs/service_good = METACOIN_AWARD_MED, //we're actually need some kind of service-players
 	/datum/award/achievement/mafia = METACOIN_AWARD_CLOSE_TO_NOTHING,
-	/datum/award/achievement/mafia/universally_hated = METACOIN_AWARD_SMALL, //you pretty good, so get your 130 points in total
+	/datum/award/achievement/mafia/universally_hated = METACOIN_AWARD_SMALL, //you pretty good, so get your 110 points in total
 	/datum/award/achievement/boss = METACOIN_AWARD_SMALL,
 	/datum/award/achievement/skill = METACOIN_AWARD_SMALL,
 	/datum/award/score/hardcore_random = METACOIN_AWARD_CLOSE_TO_NOTHING, //5 more points for random character it's fair
