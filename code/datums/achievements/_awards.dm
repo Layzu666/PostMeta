@@ -91,7 +91,12 @@
 	if(holder.data[type]) //You already unlocked it so don't bother running the unlock proc
 		return
 	holder.data[type] = TRUE
-
+	//MASSMETA EDIT ADDITION START (metacoins)
+	//Metacoins for achievementssss!
+	var/datum/metacoins_controller/metacoin_controller = get_metacoins_controller()
+	if(metacoin_controller)
+		metacoin_controller.award_achievement_metacoins(holder.owner_ckey, type, name)
+	//MASSMETA EDIT ADDITION END (metacoins)
 	to_chat(user, span_greenannounce("<B>Achievement unlocked: [name]!</B>"))
 	var/sound/sound_to_send = LAZYACCESS(GLOB.achievement_sounds, user.client.prefs.read_preference(/datum/preference/choiced/sound_achievement))
 	if(sound_to_send)

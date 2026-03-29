@@ -45,6 +45,7 @@
 #include "features\novichok\includes.dm"
 #include "features\jukeboxes_to_bartender\includes.dm"
 #include "features\bot_topic\includes.dm"
+#include "features\metacoins\includes.dm"
 #include "features\spaceman_races\includes.dm"
 
 /* --- Reverts --- */
