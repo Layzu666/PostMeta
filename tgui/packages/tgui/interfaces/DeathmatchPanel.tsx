@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
 import {
+  Box,
   Button,
   Dropdown,
   Icon,
   NoticeBox,
+  NumberInput,
   Section,
   Stack,
   Table,
@@ -21,7 +25,6 @@ type Lobby = {
   playing: BooleanLike;
   /* MASSMETA EDIT ADDITION START (metacoins) */
   entry_fee: number;
-  entry_fee_set: BooleanLike;
   prize_pool: number;
   /* MASSMETA EDIT ADDITION START (metacoins) */
 };
@@ -36,6 +39,15 @@ type Data = {
 export function DeathmatchPanel(props) {
   const { act, data } = useBackend<Data>();
   const { hosting } = data;
+  /* MASSMETA EDIT ADDITION START (metacoins) */
+  const feeOptions = ['0', '30', '50', '60', '80', '100', 'Custom'];
+  const [selectedFee, setSelectedFee] = useState('0');
+  const [customFee, setCustomFee] = useState(0);
+  const customMode = selectedFee === 'Custom';
+  const resolvedFee = customMode
+    ? Math.min(1000, Math.max(0, Math.round(customFee)))
+    : Math.min(1000, Math.max(0, Math.round(Number(selectedFee) || 0)));
+  /* MASSMETA EDIT ADDITION START (metacoins) */
 
   return (
     // MASSMETA EDIT ADDITION START (metacoins)
@@ -54,15 +66,66 @@ export function DeathmatchPanel(props) {
             <LobbyPane />
           </Stack.Item>
           <Stack.Item>
-            <Button
-              disabled={!!hosting}
-              fluid
-              textAlign="center"
-              color="good"
-              onClick={() => act('host')}
-            >
-              Create Lobby
-            </Button>
+            {/* MASSMETA EDIT CHANGE START (metacoins)
+            original:
+                <Button
+                  disabled={!!hosting}
+                  fluid
+                  textAlign="center"
+                  color="good"
+                  onClick={() => act('host')}
+                 >
+                  Create Lobby
+                </Button>
+
+                */}
+            <Stack>
+              <Stack.Item align="center">
+                <Box color="label">Entry fee:</Box>
+              </Stack.Item>
+              <Stack.Item>
+                <Dropdown
+                  width={12}
+                  selected={selectedFee}
+                  options={feeOptions}
+                  disabled={!!hosting}
+                  onSelected={(value) => setSelectedFee(String(value))}
+                />
+              </Stack.Item>
+              {customMode && (
+                <Stack.Item grow>
+                  <NumberInput
+                    width="100%"
+                    minValue={0}
+                    maxValue={1000}
+                    step={1}
+                    value={customFee}
+                    disabled={!!hosting}
+                    onChange={(value) =>
+                      setCustomFee(
+                        Math.min(1000, Math.max(0, Math.round(value))),
+                      )
+                    }
+                  />
+                </Stack.Item>
+              )}
+              <Stack.Item grow>
+                <Button
+                  disabled={!!hosting}
+                  fluid
+                  textAlign="center"
+                  color="good"
+                  onClick={() =>
+                    act('host', {
+                      entry_fee: resolvedFee,
+                    })
+                  }
+                >
+                  Create Lobby
+                </Button>
+              </Stack.Item>
+            </Stack>
+            {/*MASSMETA EDIT CHANGE END (metacoins) */}
           </Stack.Item>
         </Stack>
       </Window.Content>
@@ -157,7 +220,7 @@ function LobbyDisplay(props) {
       <Table.Cell>{lobby.map}</Table.Cell>
       {/* MASSMETA EDIT ADDITION START (metacoins) */}
       <Table.Cell collapsing textAlign="right">
-        {lobby.entry_fee_set ? lobby.entry_fee || 0 : '-'}
+        {lobby.entry_fee || 0}
       </Table.Cell>
       <Table.Cell collapsing textAlign="center">
         {lobby.prize_pool || 0}

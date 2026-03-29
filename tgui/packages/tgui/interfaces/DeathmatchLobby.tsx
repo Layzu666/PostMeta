@@ -1,6 +1,3 @@
-// MASSMETA EDIT ADDITION START (metacoins)
-import { useState } from 'react';
-// MASSMETA EDIT ADDITION END (metacoins)
 import {
   Box,
   Button,
@@ -10,9 +7,6 @@ import {
   LabeledList,
   Modal,
   NoticeBox,
-  // MASSMETA EDIT ADDITION START (metacoins)
-  NumberInput,
-  // MASSMETA EDIT ADDITION END (metacoins)
   Section,
   Stack,
   Table,
@@ -54,7 +48,6 @@ type Data = {
   admin: BooleanLike;
   // MASSMETA EDIT ADDITION START (metacoins)
   entry_fee: number;
-  entry_fee_set: BooleanLike;
   // MASSMETA EDIT ADDITION END (metacoins)
   host: BooleanLike;
   loadoutdesc: string;
@@ -300,7 +293,6 @@ function HostControls(props) {
     active_mods = [],
     admin,
     entry_fee,
-    entry_fee_set,
     host,
     loadoutdesc,
     playing,
@@ -308,21 +300,6 @@ function HostControls(props) {
   } = data;
   /* MASSMETA EDIT ADDITION END (metacoins) */
   const fullAccess = !!host || !!admin;
-  const canSetFee = !!host;
-  /* MASSMETA EDIT ADDITION START (metacoins) */
-  const feeOptions = ['30', '50', '60', '80', '100', 'Custom'];
-  /* MASSMETA EDIT ADDITION START (metacoins) */
-  const feeSelected =
-    !entry_fee_set || entry_fee === 0
-      ? 'Select Fee'
-      : feeOptions.includes(String(entry_fee))
-        ? String(entry_fee)
-        : 'Custom';
-  /* MASSMETA EDIT ADDITION END (metacoins) */
-  const [customFee, setCustomFee] = useState(entry_fee || 30);
-  const [customMode, setCustomMode] = useState(feeSelected === 'Custom');
-  const showCustomInput = customMode || feeSelected === 'Custom';
-  /* MASSMETA EDIT ADDITION END (metacoins) */
 
   return (
     <Section fill scrollable>
@@ -343,66 +320,6 @@ function HostControls(props) {
       {fullAccess && (
         <>
           <Divider />
-          {/* MASSMETA EDIT ADDITION START (metacoins) */}
-          {canSetFee && !playing && (
-            <Dropdown
-              width="100%"
-              selected={feeSelected}
-              options={['Select Fee', ...feeOptions]}
-              onSelected={(value) => {
-                if (value === 'Select Fee') {
-                  setCustomMode(false);
-                  act('host', {
-                    func: 'set_entry_fee_preset',
-                    preset: '0',
-                  });
-                  return;
-                }
-                if (value === 'Custom') {
-                  setCustomMode(true);
-                  return;
-                }
-                setCustomMode(false);
-                act('host', {
-                  func: 'set_entry_fee_preset',
-                  preset: value,
-                });
-              }}
-            />
-          )}
-          {/* MASSMETA EDIT CHANGE START (metacoins) */}
-          {/* ORIGINAL: {!playing && showCustomInput && (*/}
-          {canSetFee && !playing && showCustomInput && (
-            // MASSMETA EDIT CHANGE END (metacoins)
-            <Stack mt={1}>
-              <Stack.Item grow>
-                <NumberInput
-                  width="100%"
-                  minValue={0}
-                  maxValue={100000}
-                  step={1}
-                  value={customFee}
-                  onChange={(value) => setCustomFee(Math.round(value))}
-                />
-              </Stack.Item>
-              <Stack.Item>
-                <Button
-                  color="good"
-                  onClick={() =>
-                    act('host', {
-                      func: 'set_entry_fee_preset',
-                      preset: 'Custom',
-                      custom_fee: customFee,
-                    })
-                  }
-                >
-                  Apply
-                </Button>
-              </Stack.Item>
-            </Stack>
-          )}
-          {!playing && <Divider />}
-          {/* MASSMETA EDIT ADDITION END (metacoins) */}
           <Button textAlign="center" fluid onClick={() => act('open_mod_menu')}>
             Toggle Modifiers
           </Button>

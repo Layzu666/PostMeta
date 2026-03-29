@@ -26,27 +26,27 @@
 	// MASSMETA EDIT ADDITION START (metacoins)
 	/// Metacoin entry fee for each player slot in this lobby.
 	var/entry_fee = 0
-	/// Host already picked an entry fee and non-host players can move into players list.
-	var/entry_fee_set = TRUE
 	/// Current metacoin bank for winner payout.
 	var/prize_pool = 0
 	/// ckey => paid metacoins for this lobby.
 	var/list/fees_paid = list()
 	//MASSMETA EDIT ADDITION END (metacoins)
 
-/datum/deathmatch_lobby/New(mob/player)
+/datum/deathmatch_lobby/New(mob/player, initial_fee = 0)
 	. = ..()
 	if (!player)
 		stack_trace("Attempted to create a deathmatch lobby without a host.")
 		return qdel(src)
 	host = player.ckey
+	entry_fee = max(round(text2num("[initial_fee]") || 0), 0)
 	map = GLOB.deathmatch_game.maps[pick(GLOB.deathmatch_game.maps)]
 	log_game("[host] created a deathmatch lobby.")
 	if (map.allowed_loadouts)
 		loadouts = map.allowed_loadouts
 	else
 		loadouts = GLOB.deathmatch_game.loadouts
-	add_player(player, loadouts[1], TRUE)
+	if(!add_player(player, loadouts[1], TRUE))
+		return qdel(src)
 	ui_interact(player)
 	addtimer(CALLBACK(src, PROC_REF(lobby_afk_probably)), 5 MINUTES) // being generous here
 
@@ -320,12 +320,6 @@
 /datum/deathmatch_lobby/proc/join(mob/player)
 	if (playing || !player)
 		return
-	if(!entry_fee_set && player.ckey != host)
-		if(!(player.ckey in observers))
-			add_observer(player)
-		to_chat(player, span_warning("Host has not set entry fee yet. You joined as observer for now."))
-		ui_interact(player)
-		return
 	if(!(player.ckey in (players+observers)))
 		if (players.len >= map.max_players)
 			add_observer(player)
@@ -433,7 +427,6 @@
 	data["players"] = get_player_list()
 	// //MASSMETA EDIT ADDITION START (metacoins)
 	data["entry_fee"] = entry_fee
-	data["entry_fee_set"] = entry_fee_set
 	data["prize_pool"] = prize_pool
 	// //MASSMETA EDIT ADDITION END (metacoins)
 	data["playing"] = playing
@@ -499,9 +492,6 @@
 				add_observer(usr, host == usr.ckey)
 				return TRUE
 			else if (observers[usr.ckey] && players.len < map.max_players)
-				if(!entry_fee_set && usr.ckey != host)
-					to_chat(usr, span_warning("Host must set entry fee before players can join the match."))
-					return FALSE
 				remove_ckey_from_play(usr.ckey)
 				// MASSMETA EDIT CHANGE START (metacoins)
 				// original: add_player(usr, loadouts[1], host == usr.ckey)
@@ -543,9 +533,6 @@
 						remove_ckey_from_play(uckey)
 						add_observer(umob, host == uckey)
 					else if (observers[uckey] && players.len < map.max_players)
-						if(!entry_fee_set && uckey != host)
-							to_chat(usr, span_warning("Set entry fee before moving players from observer to player list."))
-							return FALSE
 						remove_ckey_from_play(uckey)
 						// MASSMETA EDIT CHANGE START (metacoins)
 						// original: add_player(umob, loadouts[1], host == uckey)
@@ -559,27 +546,6 @@
 						return FALSE
 					change_map(params["map"])
 					return TRUE
-				//MASSMETA EDIT ADDITION START (metacoins)
-				if("set_entry_fee_preset")
-					if(usr.ckey != host)
-						return FALSE
-
-					var/non_host_players = players.len - (players[host] ? 1 : 0)
-					if(non_host_players > 0)
-						to_chat(usr, span_warning("You can only change entry fee before other players join"))
-						return FALSE
-
-					var/chosen_preset = params["preset"]
-					var/new_fee
-					if(chosen_preset == "Custom")
-						new_fee = text2num(params["custom_fee"])
-					else
-						new_fee = text2num(chosen_preset)
-
-					if(!isnum(new_fee) || QDELETED(src) || QDELETED(usr))
-						return FALSE
-					return set_fee(new_fee, usr)
-					//MASSMETA EDIT ADDITION END (metacoins)
 
 		if("open_mod_menu")
 			mod_menu_open = TRUE
@@ -668,51 +634,6 @@
 	var/mob/player_mob = get_mob_by_ckey(target_ckey)
 	if(player_mob)
 		to_chat(player_mob, span_notice("Entry fee refunded: [paid_amount] metacoins. [reason]"))
-	return TRUE
-
-/// Applies new entry fee. Host has to be able to pay the difference immediately.
-/datum/deathmatch_lobby/proc/set_fee(new_fee, mob/requester)
-	if(!isnum(new_fee))
-		return FALSE
-
-	new_fee = round(new_fee)
-	new_fee = max(new_fee, 0)
-
-	if(new_fee == entry_fee && entry_fee_set)
-		return TRUE
-
-	var/old_fee = entry_fee
-	var/old_entry_fee_set = entry_fee_set
-	entry_fee = new_fee
-	entry_fee_set = TRUE
-
-	if(players[host])
-		var/mob/host_mob = get_mob_by_ckey(host)
-		if(!host_mob)
-			entry_fee = old_fee
-			entry_fee_set = old_entry_fee_set
-			to_chat(requester, span_warning("Host is unavailable, entry fee cannot be changed right now."))
-			return FALSE
-
-		var/host_paid = text2num(fees_paid[host]) || 0
-		if(new_fee > host_paid)
-			if(!pay_fee(host_mob))
-				entry_fee = old_fee
-				entry_fee_set = old_entry_fee_set
-				return FALSE
-		else if(new_fee < host_paid)
-			var/refund_amount = host_paid - new_fee
-			var/datum/metacoin_shop_controller/shop = get_metacoin_shop_controller()
-			if(!shop || !shop.add_metacoins(host, refund_amount))
-				entry_fee = old_fee
-				entry_fee_set = old_entry_fee_set
-				to_chat(requester, span_warning("Failed to refund host fee difference."))
-				return FALSE
-			fees_paid[host] = new_fee
-			prize_pool = max(prize_pool - refund_amount, 0)
-
-	to_chat(requester, span_notice("Lobby entry fee set to [entry_fee] metacoins."))
-	SStgui.update_uis(src)
 	return TRUE
 
 /// Pays prize pool to winner. If payout fails, tries to refund everyone.
