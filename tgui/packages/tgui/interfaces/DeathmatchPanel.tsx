@@ -86,7 +86,7 @@ function LobbyPane(props) {
               <Icon name="coins" />
             </Tooltip>
           </Table.Cell>
-          <Table.Cell textAlign="right">
+          <Table.Cell textAlign="center">
             <Tooltip content="Prize pool">
               <Icon name="piggy-bank" />
             </Tooltip>
@@ -105,7 +105,12 @@ function LobbyPane(props) {
         {lobbies.length === 0 && (
           <Table.Row>
             {/* MASSMETA EDIT ADDITION START (metacoins) */}
-            <Table.Cell colSpan={6}>
+            <Table.Cell
+              colSpan={6}
+              textAlign="center"
+              verticalAlign="middle"
+              style={{ padding: '0.6rem 0.5rem' }}
+            >
               {/* MASSMETA EDIT ADDITION END (metacoins) */}
               <NoticeBox textAlign="center">
                 No lobbies found. Start one!
@@ -154,7 +159,7 @@ function LobbyDisplay(props) {
       <Table.Cell collapsing textAlign="right">
         {lobby.entry_fee_set ? lobby.entry_fee || 0 : '-'}
       </Table.Cell>
-      <Table.Cell collapsing textAlign="right">
+      <Table.Cell collapsing textAlign="center">
         {lobby.prize_pool || 0}
       </Table.Cell>
       {/* MASSMETA EDIT ADDITION END (metacoins) */}
