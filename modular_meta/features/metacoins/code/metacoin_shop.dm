@@ -156,13 +156,26 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 /datum/metacoin_shop_controller/proc/get_antag_token_restricted_jobs()
 	var/static/list/antag_token_restricted_jobs = list(
 		JOB_CAPTAIN,
+		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
+		JOB_RESEARCH_DIRECTOR,
+		JOB_CHIEF_ENGINEER,
+		JOB_CHIEF_MEDICAL_OFFICER,
+		JOB_QUARTERMASTER,
+		JOB_BRIDGE_ASSISTANT,
+		JOB_VETERAN_ADVISOR,
+		JOB_AI,
+		JOB_CYBORG,
+		JOB_HUMAN_AI,
 		JOB_WARDEN,
+		JOB_DETECTIVE,
 		JOB_SECURITY_OFFICER,
 		JOB_SECURITY_OFFICER_MEDICAL,
 		JOB_SECURITY_OFFICER_ENGINEERING,
 		JOB_SECURITY_OFFICER_SCIENCE,
 		JOB_SECURITY_OFFICER_SUPPLY,
+		JOB_PRISONER,
+		JOB_CARGO_GORILLA,
 	) //i've spawned as a heretic captain, that's why it exists
 
 	return antag_token_restricted_jobs

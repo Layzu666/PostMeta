@@ -6,6 +6,9 @@
 #define METACOIN_ICON_PATH "icons/obj/economy.dmi"
 #define METACOIN_ICON_STATE "coin_tails" // someone get us a nice lil' carp_coin sprite, or "masscoin"
 //metacoin awards, right now only used in achievements.
+#define METACOIN_AWARD_NONE 0
+#define METACOIN_AWARD_ONE_POINT 1
+#define METACOIN_AWARD_CLOSE_TO_NOTHING 5
 #define METACOIN_AWARD_SMALL 70
 #define METACOIN_AWARD_MED 150
 #define METACOIN_AWARD_BIG 250
@@ -13,9 +16,20 @@
 
 //Custom rewards list, if you want to, let's say, award more metacoins for specific achievements.
 GLOBAL_ALIST_INIT(metacoin_achievement_reward_overrides, alist(
-	/datum/award/achievement/misc/sisyphus = METACOIN_AWARD_HUGE,
-	/datum/award/achievement/misc = METACOIN_AWARD_SMALL
-
+	/datum/award/achievement/misc/selfouch = METACOIN_AWARD_NONE, //so noone abuse it
+	/datum/award/achievement/misc/sisyphus = METACOIN_AWARD_MED,
+	/datum/award/achievement/misc/grand_ritual_finale = METACOIN_AWARD_BIG, //you anyways don't get it, noob
+	/datum/award/achievement/misc/pulse = METACOIN_AWARD_HUGE, //i just hit the jackpooot
+	/datum/award/achievement/misc = METACOIN_AWARD_SMALL,
+	/datum/award/achievement/jobs = METACOIN_AWARD_SMALL,
+	/datum/award/achievement/jobs/theoretical_limits = METACOIN_AWARD_MED,
+	/datum/award/achievement/jobs/service_good = METACOIN_AWARD_MED, //we're actually need some kind of service-players
+	/datum/award/achievement/mafia = METACOIN_AWARD_CLOSE_TO_NOTHING,
+	/datum/award/achievement/mafia/universally_hated = METACOIN_AWARD_SMALL, //you pretty good, so get your 130 points in total
+	/datum/award/achievement/boss = METACOIN_AWARD_SMALL,
+	/datum/award/achievement/skill = METACOIN_AWARD_SMALL,
+	/datum/award/score/hardcore_random = METACOIN_AWARD_CLOSE_TO_NOTHING, //5 more points for random character it's fair
+	/datum/award/score/maintenance_pill = METACOIN_AWARD_ONE_POINT,
 ))
 
 GLOBAL_DATUM(metacoins_controller, /datum/metacoins_controller)
@@ -402,6 +416,9 @@ GLOBAL_DATUM(metacoins_controller, /datum/metacoins_controller)
 #undef METACOIN_IMPORTANT_JOBS
 #undef METACOIN_ICON_PATH
 #undef METACOIN_ICON_STATE
+#undef METACOIN_AWARD_NONE
+#undef METACOIN_AWARD_ONE_POINT
+#undef METACOIN_AWARD_CLOSE_TO_NOTHING
 #undef METACOIN_AWARD_SMALL
 #undef METACOIN_AWARD_MED
 #undef METACOIN_AWARD_BIG
