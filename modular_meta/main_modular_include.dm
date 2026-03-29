@@ -41,6 +41,7 @@
 #include "features\telescience\includes.dm"
 #include "features\deathmatch\includes.dm"
 #include "features\soundtrack_modpack\includes.dm"
+#include "features\symbolics\includes.dm"
 #include "features\novichok\includes.dm"
 #include "features\jukeboxes_to_bartender\includes.dm"
 #include "features\bot_topic\includes.dm"

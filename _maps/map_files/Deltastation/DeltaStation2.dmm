@@ -813,6 +813,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "akf" = (
@@ -2298,6 +2299,7 @@
 /obj/item/toy/figure/ce,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/directional/north,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/ce)
 "aBz" = (
@@ -3464,6 +3466,7 @@
 /obj/item/kirbyplants/random,
 /obj/machinery/status_display/evac/directional/south,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "aQG" = (
@@ -7747,6 +7750,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai/satellite/interior)
 "bRP" = (
@@ -27522,6 +27526,7 @@
 	},
 /obj/structure/closet/l3closet/scientist,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/science/research)
 "gHq" = (
@@ -29286,6 +29291,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/scientist,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "heT" = (
@@ -29438,6 +29444,7 @@
 /obj/structure/table/wood,
 /obj/item/papercutter,
 /obj/item/radio/intercom/directional/east,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "hgH" = (
@@ -41398,6 +41405,7 @@
 /obj/item/plant_analyzer,
 /obj/item/radio,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/engineering/storage/tech)
 "keH" = (
@@ -45094,6 +45102,10 @@
 /obj/machinery/status_display/ai/directional/north,
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 4
+	},
+/obj/structure/sign/flag/massmeta/pmc_wagner{
+	pixel_x = 32;
+	pixel_y = 0
 	},
 /turf/open/floor/iron,
 /area/station/security/prison/safe)
@@ -54381,6 +54393,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral/full,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/security/detectives_office)
 "nuM" = (
@@ -63336,6 +63349,7 @@
 /obj/structure/table/wood,
 /obj/machinery/computer/security/wooden_tv,
 /obj/machinery/light/small/directional/south,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/grimy,
 /area/station/command/heads_quarters/captain/private)
 "pGt" = (
@@ -66417,6 +66431,7 @@
 	c_tag = "Cargo - Waiting Room";
 	name = "cargo camera"
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "qqe" = (
@@ -72861,6 +72876,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "rVM" = (
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
 "rVX" = (
@@ -76934,6 +76950,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "sVe" = (
@@ -77523,6 +77540,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "tcn" = (
@@ -77670,6 +77688,7 @@
 /area/station/security/armory)
 "teA" = (
 /obj/structure/displaycase/captain,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/grimy,
 /area/station/command/heads_quarters/captain)
 "teC" = (
@@ -78146,6 +78165,7 @@
 /obj/machinery/keycard_auth/wall_mounted/directional/west,
 /obj/item/flashlight/lamp,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/hop)
 "tnu" = (
@@ -78609,6 +78629,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
 "tsM" = (
@@ -82022,6 +82043,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/tile/neutral,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "uja" = (
@@ -86347,6 +86369,7 @@
 	fax_name = "Law Office";
 	name = "Law Office Fax Machine"
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/wood,
 /area/station/service/lawoffice)
 "vmP" = (
@@ -87692,6 +87715,13 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hos)
+"vDj" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central/fore)
 "vDm" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -90610,6 +90640,7 @@
 /area/station/hallway/secondary/exit/departure_lounge)
 "wpt" = (
 /obj/structure/fireplace,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/stone,
 /area/station/command/corporate_showroom)
 "wpu" = (
@@ -141626,7 +141657,7 @@ jol
 lSl
 ltY
 lSl
-lSl
+vDj
 dbU
 lBR
 rRB
