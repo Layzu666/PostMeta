@@ -19,6 +19,9 @@ type RoleOption = {
   fallbackIcon?: string;
   available: boolean;
   unavailableReason?: string | null;
+  unavailableCode?: string | null;
+  minPopCurrent?: number | null;
+  minPopRequired?: number | null;
 };
 
 type Data = {
@@ -114,6 +117,8 @@ export const MetaCoinAntagToken = () => {
               const fallbackName = role.fallbackIcon || 'question-circle';
               const fallbackNode = <Icon name={fallbackName} size={4} />;
               const roleDisabled = !canBuyToken || !role.available;
+              const unavailableReasonText =
+                role.unavailableReason || 'Role is unavailable right now.';
               const iconBorderColor = roleDisabled
                 ? 'var(--color-red)'
                 : 'var(--color-green)';
@@ -193,10 +198,15 @@ export const MetaCoinAntagToken = () => {
 
                     <Box>{role.desc}</Box>
 
-                    {!role.available && (
+                    {!role.available && role.unavailableCode === 'min_pop' && (
                       <Box mt={1} color="bad">
-                        {role.unavailableReason ||
-                          'Role is unavailable right now.'}
+                        {`Not enough population (${Number(role.minPopCurrent ?? 0)}/${Number(role.minPopRequired ?? 0)}).`}
+                      </Box>
+                    )}
+
+                    {!role.available && role.unavailableCode !== 'min_pop' && (
+                      <Box mt={1} color="bad">
+                        {unavailableReasonText}
                       </Box>
                     )}
                   </Section>

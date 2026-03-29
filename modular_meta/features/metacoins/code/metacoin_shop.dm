@@ -198,42 +198,33 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 			"id" = "traitor",
 			"name" = "Traitor",
 			"desc" = "An unpaid debt. A score to be settled. Maybe you were just in the wrong \
-      		place at the wrong time. Whatever the reasons, you were selected to \
-      		infiltrate Space Station 13.",
+	   		place at the wrong time. Whatever the reasons, you were selected to \
+	   		infiltrate Space Station 13.",
 			"ruleset_tag" = "Roundstart Traitor",
 			"jobban_flag" = ROLE_TRAITOR,
 			"antag_datum" = /datum/antagonist/traitor,
-			"default_weight" = 10, //default weight is needed only to check if it's bigger than zero, to allow the spawn :)
 			"default_min_pop" = 3,
-			"hud_icon_state" = "traitor",
-			"fallback_icon" = "user-secret",
 		),
 		alist(
 			"id" = "changeling",
 			"name" = "Changeling",
 			"desc" = "A highly intelligent alien predator that is capable of altering their \
-      shape to flawlessly resemble a human.",
+	 shape to flawlessly resemble a human.",
 			"ruleset_tag" = "Roundstart Changeling",
 			"jobban_flag" = ROLE_CHANGELING,
 			"antag_datum" = /datum/antagonist/changeling,
-			"default_weight" = 3,
 			"default_min_pop" = 15,
-			"hud_icon_state" = "changeling",
-			"fallback_icon" = "dna",
 		),
 		alist(
 			"id" = "heretic",
 			"name" = "Heretic",
 			"desc" = " Forgotten, devoured, gutted. Humanity has forgotten the eldritch forces \
-      		of decay, but the mansus veil has weakened. We will make them taste fear \
-      		again...",
+	   		of decay, but the mansus veil has weakened. We will make them taste fear \
+	   		again...",
 			"ruleset_tag" = "Roundstart Heretics",
 			"jobban_flag" = ROLE_HERETIC,
 			"antag_datum" = /datum/antagonist/heretic,
-			"default_weight" = 3,
 			"default_min_pop" = 30,
-			"hud_icon_state" = "heretic",
-			"fallback_icon" = "book-dead",
 		),
 	)
 
@@ -311,17 +302,12 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 
 	var/default_min_pop = role_definition["default_min_pop"]
 	var/min_pop_setting = default_min_pop
-	var/default_weight = role_definition["default_weight"]
-	var/weight_setting = default_weight
 
 	if(CONFIG_GET(flag/dynamic_config_enabled))
 		var/ruleset_tag = role_definition["ruleset_tag"]
 		var/list/ruleset_config = SSdynamic.get_config()?[ruleset_tag]
 
-		if(!isnull(ruleset_config?["weight"]))
-			weight_setting = ruleset_config["weight"]
-
-		if(!dynamic_weight_has_positive_value(weight_setting))
+		if(!isnull(ruleset_config?["weight"]) && !dynamic_weight_has_positive_value(ruleset_config["weight"]))
 			return list("code" = "disabled_by_config")
 
 		if(!isnull(ruleset_config?["min_pop"]))
@@ -381,9 +367,12 @@ GLOBAL_DATUM(metacoin_shop_controller, /datum/metacoin_shop_controller)
 			"name" = role_definition["name"],
 			"desc" = role_definition["desc"],
 			"prefIconClass" = role_id,
-			"fallbackIcon" = role_definition["fallback_icon"],
+			"fallbackIcon" = default_listing_fallback_icon,
 			"available" = isnull(block_info),
 			"unavailableReason" = get_antag_token_role_block_text(block_info),
+			"unavailableCode" = block_info?["code"],
+			"minPopCurrent" = block_info?["current_pop"],
+			"minPopRequired" = block_info?["required_pop"],
 		))
 
 	return roles_ui_data
