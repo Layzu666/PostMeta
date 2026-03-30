@@ -15526,6 +15526,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "flH" = (
@@ -22341,6 +22342,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/showroomfloor,
 /area/station/medical/psychology)
 "hpS" = (
@@ -23280,6 +23282,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/closed/wall/r_wall,
 /area/station/science/ordnance/office)
+"hFC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
+/turf/open/floor/iron/showroomfloor,
+/area/station/medical/chemistry)
 "hGf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -32879,6 +32887,7 @@
 	},
 /obj/item/reagent_containers/cup/glass/trophy/bronze_cup,
 /obj/machinery/camera/autoname/directional/west,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/carpet/royalblue,
 /area/station/service/chapel/office)
 "kKm" = (
@@ -40100,6 +40109,7 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
 "nan" = (
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "naw" = (
@@ -40509,6 +40519,7 @@
 "ngI" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/mapping_helpers/burnt_floor,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/plating,
 /area/station/security/prison)
 "ngV" = (
@@ -45025,6 +45036,7 @@
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/layer2{
 	dir = 8
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
 "oQg" = (
@@ -53538,6 +53550,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
 "rDi" = (
@@ -56522,6 +56535,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/rd)
 "sBm" = (
@@ -57149,6 +57163,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
 "sKr" = (
@@ -65419,6 +65434,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "vrN" = (
@@ -66673,6 +66689,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "vJH" = (
@@ -68696,7 +68713,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass{
 	pixel_y = 2
 	},
-/obj/machinery/status_display/evac/directional/west,
 /obj/machinery/button/door/directional/south{
 	id = "hosspace";
 	name = "Space Blast Door Toggle";
@@ -68706,6 +68722,7 @@
 	pixel_x = 6;
 	pixel_y = -33
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hos)
 "woc" = (
@@ -72288,6 +72305,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "xwO" = (
@@ -74295,6 +74313,7 @@
 /obj/machinery/camera/preset/ordnance{
 	dir = 4
 	},
+/obj/effect/spawner/random/structure/massmeta_flags/directional/east,
 /turf/open/floor/engine/vacuum,
 /area/station/science/ordnance/bomb)
 "yej" = (
@@ -89336,7 +89355,7 @@ nJF
 rZW
 rZW
 rZW
-vHr
+hFC
 mtV
 hPx
 vwv
