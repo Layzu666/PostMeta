@@ -110,7 +110,7 @@
 
 /datum/emote/living/carbon/human/aprilfools/sex
     key = "sex"
-    message = "somehow turned this into a threat."
+    message = "somehow turns this into a threat."
     emote_icon_state = "sex"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/gey-echo.ogg'
 
@@ -149,13 +149,13 @@
 
 /datum/emote/living/carbon/human/aprilfools/red
     key = "red"
-    message = "is turning red. rapidly."
+    message = "is rapidly turning red."
     emote_icon_state = "red"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/ia-uzhe-krasnyi.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/ohmygod
     key = "ohmygod"
-    message = "just witnessed something unbelievable."
+    message = "is absolutely stunned."
     emote_icon_state = "ohmygod"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/ohmygod.ogg'
 
