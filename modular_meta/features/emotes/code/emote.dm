@@ -110,25 +110,25 @@
 
 /datum/emote/living/carbon/human/aprilfools/sex
     key = "sex"
-    message = "includes a secret intent."
+    message = "interpreted as a threat."
     emote_icon_state = "sex"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/gey-echo.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/haram
     key = "haram"
-    message = "это haram!"
+    message = "strictly forbidden!"
     emote_icon_state = "haram"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/musulmanin.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/robloxlaugh
     key = "robloxlaugh"
-    message = "laughs like John Roblox."
+    message = "he is actually dying of laughter."
     emote_icon_state = "robloxlaugh"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/laughter-hahahahahaahahahah-funnyy.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/poebat
     key = "poebat"
-    message = "he doesn't care."
+    message = "zero emotions given."
     emote_icon_state = "poebat"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/rizz-sound.ogg'
 
@@ -139,12 +139,12 @@
 
 /datum/emote/living/carbon/human/aprilfools/true
     key = "true"
-    message = "speaks the truth."
+    message = "facts only."
     emote_icon_state = "true"
 
 /datum/emote/living/carbon/human/aprilfools/jokerge1
     key = "jokerge1"
-    message = "grins maniacally."
+    message = "here comes the profit."
     emote_icon_state = "jokerge1"
 
 /datum/emote/living/carbon/human/aprilfools/red
@@ -155,7 +155,7 @@
 
 /datum/emote/living/carbon/human/aprilfools/ohmygod
     key = "ohmygod"
-    message = "pleasantly surprised."
+    message = "is absolutely stunned."
     emote_icon_state = "ohmygod"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/ohmygod.ogg'
 
