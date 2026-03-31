@@ -110,52 +110,52 @@
 
 /datum/emote/living/carbon/human/aprilfools/sex
     key = "sex"
-    message = "interpreted as a threat."
+    message = "somehow turned this into a threat."
     emote_icon_state = "sex"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/gey-echo.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/haram
     key = "haram"
-    message = "strictly forbidden!"
+    message = "declares this absolutely haram."
     emote_icon_state = "haram"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/musulmanin.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/robloxlaugh
     key = "robloxlaugh"
-    message = "he is actually dying of laughter."
+    message = "is actually dying of laughter."
     emote_icon_state = "robloxlaugh"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/laughter-hahahahahaahahahah-funnyy.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/poebat
     key = "poebat"
-    message = "zero emotions given."
+    message = "could not care less."
     emote_icon_state = "poebat"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/rizz-sound.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/money
     key = "money"
-    message = "shows you the money!"
+    message = "pulls out the money like it solves everything!"
     emote_icon_state = "money"
 
 /datum/emote/living/carbon/human/aprilfools/true
     key = "true"
-    message = "facts only."
+    message = "nods. only facts."
     emote_icon_state = "true"
 
 /datum/emote/living/carbon/human/aprilfools/jokerge1
     key = "jokerge1"
-    message = "here comes the profit."
+    message = "is clearly plotting something."
     emote_icon_state = "jokerge1"
 
 /datum/emote/living/carbon/human/aprilfools/red
     key = "red"
-    message = "it looks red."
+    message = "is turning red. rapidly."
     emote_icon_state = "red"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/ia-uzhe-krasnyi.ogg'
 
 /datum/emote/living/carbon/human/aprilfools/ohmygod
     key = "ohmygod"
-    message = "is absolutely stunned."
+    message = "just witnessed something unbelievable."
     emote_icon_state = "ohmygod"
     sound = 'modular_meta/features/emotes/sounds/aprilfools/ohmygod.ogg'
 
